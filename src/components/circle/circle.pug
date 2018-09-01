@@ -1,20 +1,20 @@
 mixin circle(options)
-  - options = typeof options !== 'undefined' ? options : {}
-  - options.img = typeof options.img !== 'undefined' ? options.img : {}
+  - options = options ? options : {}
+  - options.img = options.img ? options.img : {}
   -
   - let imgStyle
   - if (options.img.src)
-    - imgStyle = 'background-image: url(\'' + options.img.src + '\'); '
-    -
-    - let x, y
-    - x = typeof options.img.x !== 'undefined' ? options.img.x : '0'
-    - y = typeof options.img.y !== 'undefined' ? options.img.y : '0'
-    - imgStyle += 'background-position: ' + x + ' ' + y + '; '
-    -
-    - let size = typeof options.img.size !== 'undefined' ? options.img.size : 'auto'
-    - imgStyle += 'background-size: ' + size + '; '
-    -
+    - imgStyle = 'background-image: url(\'' + options.img.src + '\');'
     - imgStyle += 'background-color: transparent;'
+    -
+    - if (options.img.x || options.img.y)
+      - let x, y
+      - x = options.img.x ? options.img.x : '0'
+      - y = options.img.y ? options.img.y : '0'
+      - imgStyle += 'background-position: ' + x + ' ' + y + ';'
+    -
+    - if (options.img.size)
+      - imgStyle += 'background-size: ' + options.img.size + ';'
 
   .circle(class=options.classname)
     .circle__inner(style=imgStyle)
