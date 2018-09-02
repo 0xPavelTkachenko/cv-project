@@ -1,0 +1,10 @@
+include ../circle/circle.pug
+
+mixin person-card(options)
+  - options = options ? options : {}
+
+  .person-card(class=options.classname)
+    +circle({classname: 'person-card__photo'})
+    .person-card__name=options.name
+    .person-card__surname=options.surname
+    .person-card__job=options.job
