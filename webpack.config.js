@@ -18,14 +18,17 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
+        exclude: /(node_modules|.git)/,
         loader: 'pug-loader'
       },
       {
         test: /\.styl$/,
+        exclude: /(node_modules|.git)/,
         use: ['style-loader', 'css-loader', 'stylus-loader']
       },
       {
         test: /\.(eot|woff|ttf|svg)$/,
+        exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
           name: "./fonts/[name].[ext]"
