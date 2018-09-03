@@ -23,6 +23,13 @@ module.exports = {
       {
         test: /\.styl$/,
         use: ['style-loader', 'css-loader', 'stylus-loader']
+      },
+      {
+        test: /\.(eot|woff|ttf|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: "./fonts/[name].[ext]"
+        }
       }
     ]
   }
