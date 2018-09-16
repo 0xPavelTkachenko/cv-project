@@ -1,0 +1,14 @@
+circle: {
+  classname,
+  outer: {width, height},
+  inner: {width, height},
+  img: {src, x, y, size}
+}
+
+person-card: {
+  classname,
+  photo,
+  name,
+  surname,
+  job
+}
