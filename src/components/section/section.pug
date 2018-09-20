@@ -1,0 +1,12 @@
+include ../circle/circle.pug
+
+mixin section(options)
+  - options = typeof options !== 'undefined' ? options : {}
+
+  .section(class=options.classname)
+    .section__header
+      +circle({classname: 'section__icon', img: options.img, outer: {width: '141px', height: '141px'}, inner: {width: '129px', height: '129px'}})
+      .section__title=options.title
+      .section__line
+    .section__content
+        block

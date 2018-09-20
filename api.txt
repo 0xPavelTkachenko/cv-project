@@ -12,3 +12,9 @@ person-card: {
   surname,
   job
 }
+
+section: {
+  classname,
+  title,
+  img: {src, x, y, size}
+}
