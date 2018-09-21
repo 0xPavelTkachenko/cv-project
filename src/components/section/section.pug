@@ -1,7 +1,7 @@
 include ../circle/circle.pug
 
 mixin section(options)
-  - options = typeof options !== 'undefined' ? options : {}
+  - options = options ? options : {}
 
   .section(class=options.classname)
     .section__header
