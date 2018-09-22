@@ -28,3 +28,9 @@ contact: {
 contact-section {
   contacts: [{title, content}]
 }
+
+skill: {
+  classname,
+  title,
+  power
+}
