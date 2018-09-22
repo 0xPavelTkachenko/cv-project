@@ -18,3 +18,9 @@ section: {
   title,
   img: {src, x, y, size}
 }
+
+contact: {
+  classname,
+  title,
+  content
+}
