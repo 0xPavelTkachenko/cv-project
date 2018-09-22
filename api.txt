@@ -24,3 +24,7 @@ contact: {
   title,
   content
 }
+
+contact-section {
+  contacts: [{title, content}]
+}
