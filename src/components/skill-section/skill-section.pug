@@ -1,0 +1,10 @@
+include ../section/section.pug
+include ../skill/skill.pug
+
+mixin skill-section(options)
+  - options = options ? options : {}
+  - options.skills = options.skills ? options.skills : []
+
+  +section({classname: 'section_skill', title: 'Skills'})
+    each s in options.skills
+      +skill({title: s.title, power: s.power})

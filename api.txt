@@ -34,3 +34,7 @@ skill: {
   title,
   power
 }
+
+skill-section: {
+  skills: [{title, power}]
+}
