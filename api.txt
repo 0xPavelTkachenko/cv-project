@@ -38,3 +38,9 @@ skill: {
 skill-section: {
   skills: [{title, power}]
 }
+
+progress-bar: {
+  classname,
+  title,
+  progress
+}
