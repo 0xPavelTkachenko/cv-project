@@ -1,0 +1,14 @@
+include ../section/section.pug
+include ../progress-bar/progress-bar.pug
+
+mixin software-section(options)
+  - options = options ? options : {}
+  - options.software = options.software ? options.software : []
+
+  +section({classname: 'section_software', title: 'Software'})
+    .section__col-1
+      - for (let i = 0; i < options.software.length; i += 2)
+        +progress-bar({title: options.software[i].title, progress: options.software[i].progress})
+    .section__col-2
+      - for (let i = 1; i < options.software.length; i += 2)
+        +progress-bar({title: options.software[i].title, progress: options.software[i].progress})

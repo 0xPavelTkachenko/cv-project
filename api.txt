@@ -44,3 +44,7 @@ progress-bar: {
   title,
   progress
 }
+
+software-section: {
+  software: [{classname, title, progress}]
+}
