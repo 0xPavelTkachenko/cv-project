@@ -1,0 +1,9 @@
+mixin period(options)
+  - options = options ? options : {}
+
+  .period(class=options.classname)
+    .period__title=options.title
+    .period__timeline=options.timeline
+    .period__subtitle=options.subtitle
+    .period__content
+      block
