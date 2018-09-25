@@ -3,9 +3,10 @@ include ../period/period.pug
 
 mixin exp-section(options)
   - options = options ? options : {}
+  - options.classname = options.classname ? options.classname : ''
   - options.exp = options.exp ? options.exp : []
 
-  +section({classname: 'section_exp', title: 'Experience'})
+  +section({classname: 'section_exp ' + options.classname, title: 'Experience'})
     ul(class='exp-list')
       each e in options.exp
         li(class='exp-list__item')

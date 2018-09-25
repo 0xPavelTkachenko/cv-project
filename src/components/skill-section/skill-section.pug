@@ -3,8 +3,9 @@ include ../skill/skill.pug
 
 mixin skill-section(options)
   - options = options ? options : {}
+  - options.classname = options.classname ? options.classname : ''
   - options.skills = options.skills ? options.skills : []
 
-  +section({classname: 'section_skill', title: 'Skills'})
+  +section({classname: 'section_skill ' + options.classname, title: 'Skills'})
     each s in options.skills
       +skill({title: s.title, power: s.power})

@@ -3,8 +3,9 @@ include ../contact/contact.pug
 
 mixin contact-section(options)
   - options = options ? options : {}
+  - options.classname = options.classname ? options.classname : ''
   - options.contacts = options.contacts ? options.contacts : []
 
-  +section({classname: 'section_contact', title: 'Contact'})
+  +section({classname: 'section_contact ' + options.classname, title: 'Contact'})
     each c in options.contacts
       +contact({title: c.title, content: c.content})

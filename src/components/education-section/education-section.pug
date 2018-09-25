@@ -3,9 +3,10 @@ include ../period/period.pug
 
 mixin education-section(options)
   - options = options ? options : {}
+  - options.classname = options.classname ? options.classname : ''
   - options.education = options.education ? options.education : []
 
-  +section({classname: 'section_education', title: 'Education'})
+  +section({classname: 'section_education ' + options.classname, title: 'Education'})
     ul(class='education-list')
       each e in options.education
         li(class='education-list__item')
