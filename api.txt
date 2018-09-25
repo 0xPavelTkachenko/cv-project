@@ -54,3 +54,7 @@ period: {
   subtitle,
   timeline
 }
+
+exp-section: {
+  exp: [{title, subtitle, timeline, content}]
+}
