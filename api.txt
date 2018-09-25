@@ -58,3 +58,7 @@ period: {
 exp-section: {
   exp: [{title, subtitle, timeline, content}]
 }
+
+education-section: {
+  education: [{title, subtitle, timeline, content}]
+}
