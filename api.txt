@@ -25,6 +25,11 @@ contact: {
   content
 }
 
+contact-list {
+  classname,
+  contacts: [{title, content}]
+}
+
 contact-section {
   classname,
   contacts: [{title, content}]
