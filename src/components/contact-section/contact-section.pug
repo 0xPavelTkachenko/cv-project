@@ -1,5 +1,5 @@
 include ../section/section.pug
-include ../contact/contact.pug
+include ../contact-list/contact-list.pug
 
 mixin contact-section(options)
   - options = options ? options : {}
@@ -7,5 +7,4 @@ mixin contact-section(options)
   - options.contacts = options.contacts ? options.contacts : []
 
   +section({classname: 'section_contact ' + options.classname, title: 'Contact'})
-    each c in options.contacts
-      +contact({title: c.title, content: c.content})
+    +contact-list({contacts: options.contacts})
