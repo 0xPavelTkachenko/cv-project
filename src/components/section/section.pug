@@ -2,7 +2,7 @@ include ../circle/circle.pug
 
 mixin section(options)
   - options = options ? options : {}
-  - let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\'); width: 150px; height: 150px;' : ''
+  - let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\');' : 'display: none;'
 
   .section(class=options.classname)
     .section__header

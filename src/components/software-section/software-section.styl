@@ -2,31 +2,35 @@
 @require '../progress-bar/progress-bar.styl'
 
 .section_software
-  .section__title
-    margin-left 38px
-    margin-bottom -2px
+  .section
+    &__icon
+      margin-right 38px
 
-  .section__line
-    margin-left 44px
-    margin-bottom -7px
+    &__title
+      margin-right 45px
+      margin-bottom -2px
 
-  .section__content
-    padding-top 58px
+    &__line
+      margin-left 0
+      margin-right 0
+      margin-bottom -9px
 
-  .section__col-1, .section__col-2
-    width 553px
+    &__content
+      padding-top 53px
+      padding-left 13px
 
-    padding-top 5px
+    &__col-1, &__col-2
+      width 553px
 
-  .section__col-1
-    float left
+      padding-top 5px
 
-    padding-left 10px
+    &__col-1
+      float left
 
-  .section__col-2
-    float right
+    &__col-2
+      float right
 
-    padding-right 8px
+      padding-right 4px
 
   .progress-bar
     margin-bottom 50px
