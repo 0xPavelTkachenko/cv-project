@@ -33,6 +33,14 @@ module.exports = {
         options: {
           name: "./fonts/[name].[ext]"
         }
+      },
+      {
+        test: /\.png$/,
+        exclude: /(node_modules|.git)/,
+        loader: 'file-loader',
+        options: {
+          name: "./img/[name].[ext]"
+        }
       }
     ]
   }

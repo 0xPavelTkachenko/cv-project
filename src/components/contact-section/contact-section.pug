@@ -6,5 +6,5 @@ mixin contact-section(options)
   - options.classname = options.classname ? options.classname : ''
   - options.contacts = options.contacts ? options.contacts : []
 
-  +section({classname: 'section_contact ' + options.classname, title: 'Contact'})
+  +section({classname: 'section_contact ' + options.classname, title: 'Contact', icon: './img/contact-icon.png'})
     +contact-list({contacts: options.contacts})

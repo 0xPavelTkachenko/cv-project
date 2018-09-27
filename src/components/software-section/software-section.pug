@@ -6,7 +6,7 @@ mixin software-section(options)
   - options.classname = options.classname ? options.classname : ''
   - options.software = options.software ? options.software : []
 
-  +section({classname: 'section_software ' + options.classname, title: 'Software'})
+  +section({classname: 'section_software ' + options.classname, title: 'Software', icon: './img/software-icon.png'})
     .section__col-1
       - for (let i = 0; i < options.software.length; i += 2)
         +progress-bar({title: options.software[i].title, progress: options.software[i].progress})

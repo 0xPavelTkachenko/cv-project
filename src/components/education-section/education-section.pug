@@ -6,7 +6,7 @@ mixin education-section(options)
   - options.classname = options.classname ? options.classname : ''
   - options.education = options.education ? options.education : []
 
-  +section({classname: 'section_education ' + options.classname, title: 'Education'})
+  +section({classname: 'section_education ' + options.classname, title: 'Education', icon: './img/education-icon.png'})
     ul(class='education-list')
       each e in options.education
         li(class='education-list__item')

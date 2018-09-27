@@ -2,10 +2,11 @@ include ../circle/circle.pug
 
 mixin section(options)
   - options = options ? options : {}
+  - let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\'); width: 150px; height: 150px;' : ''
 
   .section(class=options.classname)
     .section__header
-      +circle({classname: 'section__icon', img: options.img, outer: {width: '141px', height: '141px'}, inner: {width: '129px', height: '129px'}})
+      .section__icon(style=iconStyle)
       .section__title=options.title
       .section__line
     .section__content
