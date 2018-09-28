@@ -52,6 +52,11 @@ progress-bar: {
   progress
 }
 
+software-list: {
+  classname,
+  software: [{title, progress}]
+}
+
 software-section: {
   classname,
   software: [{title, progress}]
