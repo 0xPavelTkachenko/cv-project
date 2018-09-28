@@ -54,7 +54,7 @@ progress-bar: {
 
 software-section: {
   classname,
-  software: [{classname, title, progress}]
+  software: [{title, progress}]
 }
 
 period: {
