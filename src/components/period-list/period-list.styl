@@ -1,0 +1,29 @@
+@require '../period/period.styl'
+
+.period-list
+  margin 0
+  padding 0
+
+  &__item
+    list-style-type none
+    margin-bottom 34px
+
+  &__item::before
+    content '\b7'
+    font-size 325px
+    float left
+    position relative
+    left -95px
+    top -24px
+
+  .period
+    &__title
+      margin-left -66px
+
+    &__subtitle
+      margin-top 31px
+      margin-left -2px
+
+    &__content
+      margin-top 24px
+      margin-left 3px

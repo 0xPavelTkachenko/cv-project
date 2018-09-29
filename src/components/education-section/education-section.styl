@@ -1,5 +1,5 @@
 @require '../section/section.styl'
-@require '../period/period.styl'
+@require '../period-list/period-list.styl'
 
 .section_education
   .section
@@ -12,37 +12,14 @@
       margin-right 15px
 
     &__line
-      margin-bottom 8px
+      margin-bottom 7px
       margin-right 0
       margin-left 0
 
     &__content
-      padding-left 67px
-      padding-top 30px
+      padding-left 105px
+      padding-top 60px
 
-  .education-list
-    &__item
-      list-style-type none
-      margin-bottom 34px
-
-    &__item::before
-      content '\b7'
-      font-size 325px
-      float left
-      position relative
-      left -95px
-      top -25px
-
-    .period
-      &__title
-        margin-left -66px
-
-        color #006cb4
-
-      &__subtitle
-        margin-top 31px
-        margin-left -2px
-
-      &__content
-        margin-top 24px
-        margin-left 2px
+  .period
+    &__title
+      color #006cb4

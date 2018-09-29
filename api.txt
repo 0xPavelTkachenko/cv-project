@@ -69,6 +69,11 @@ period: {
   timeline
 }
 
+period-list: {
+  classname,
+  periods: [{title, subtitle, timeline, content}]
+}
+
 exp-section: {
   classname,
   exp: [{title, subtitle, timeline, content}]

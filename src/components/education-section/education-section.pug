@@ -1,5 +1,5 @@
 include ../section/section.pug
-include ../period/period.pug
+include ../period-list/period-list.pug
 
 mixin education-section(options)
   - options = options ? options : {}
@@ -7,8 +7,4 @@ mixin education-section(options)
   - options.education = options.education ? options.education : []
 
   +section({classname: 'section_education ' + options.classname, title: 'Education', icon: './img/education-icon.png'})
-    ul(class='education-list')
-      each e in options.education
-        li(class='education-list__item')
-          +period({title: e.title, subtitle: e.subtitle, timeline: e.timeline})
-            | #{e.content}
+    +period-list({periods: options.education})
