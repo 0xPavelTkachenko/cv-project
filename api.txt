@@ -16,7 +16,7 @@ person-card: {
 section: {
   classname,
   title,
-  img: {src, x, y, size}
+  icon
 }
 
 contact: {
