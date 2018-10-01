@@ -4,8 +4,8 @@ mixin section(options)
   - options = options ? options : {}
   - let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\');' : 'display: none;'
 
-  .section(class=options.classname)
-    .section__header
+  section.section(class=options.classname)
+    header.section__header
       .section__icon(style=iconStyle)
       .section__title=options.title
       .section__line
