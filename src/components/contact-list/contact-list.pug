@@ -1,8 +1,9 @@
 include ../contact/contact.pug
 
 mixin contact-list(options)
-  - options = options ? options : {}
-  - options.contacts = options.contacts ? options.contacts : []
+  -
+    options = options ? options : {};
+    options.contacts = options.contacts ? options.contacts : [];
 
   .contact-list(class=options.classname)
     each c in options.contacts

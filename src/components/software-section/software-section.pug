@@ -2,8 +2,9 @@ include ../section/section.pug
 include ../software-list/software-list.pug
 
 mixin software-section(options)
-  - options = options ? options : {}
-  - options.classname = options.classname ? options.classname : ''
+  -
+    options = options ? options : {};
+    options.classname = options.classname ? options.classname : '';
 
   +section({classname: 'section_software ' + options.classname, title: 'Software', icon: './img/software-icon.png'})
     +software-list({software: options.software})

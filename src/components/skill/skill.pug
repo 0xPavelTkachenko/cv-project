@@ -1,11 +1,13 @@
 mixin skill(options)
-  - options = options ? options : {}
-  - options.power = options.power ? options.power : 0
   -
-  - if (options.power < 0)
-    - options.power = 0
-  - else if (options.power > 12)
-    - options.power = 12
+    options = options ? options : {};
+    options.power = options.power ? options.power : 0;
+
+    if (options.power < 0) {
+      options.power = 0;
+    } else if (options.power > 12) {
+      options.power = 12;
+    }
 
   .skill(class=options.classname)
     .skill__title=options.title

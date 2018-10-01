@@ -1,7 +1,8 @@
 include ../circle/circle.pug
 
 mixin person-card(options)
-  - options = options ? options : {}
+  -
+    options = options ? options : {};
 
   .person-card(class=options.classname)
     +circle({classname: 'person-card__photo', img: {src: options.photo, x: 'center', y: 'center', size: 'contain'}})

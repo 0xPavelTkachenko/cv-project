@@ -1,36 +1,44 @@
 mixin circle(options)
-  - options = options ? options : {}
-  - options.outer = options.outer ? options.outer : {}
-  - options.inner = options.inner ? options.inner : {}
-  - options.img = options.img ? options.img : {}
   -
-  - let outerStyle = ''
-  - if (options.outer.width)
-    - outerStyle += 'width: ' + options.outer.width + ';'
-  -
-  - if (options.outer.height)
-    - outerStyle += 'height: ' + options.outer.height + ';'
-  -
-  - let innerStyle = ''
-  - if (options.inner.width)
-    - innerStyle += 'width: ' + options.inner.width + ';'
-  -
-  - if (options.inner.height)
-    - innerStyle += 'height: ' + options.inner.height + ';'
-  -
-  - let imgStyle = ''
-  - if (options.img.src)
-    - imgStyle += 'background-image: url(\'' + options.img.src + '\');'
-    - imgStyle += 'background-color: transparent;'
-    -
-    - if (options.img.x || options.img.y)
-      - let x, y
-      - x = options.img.x ? options.img.x : '0'
-      - y = options.img.y ? options.img.y : '0'
-      - imgStyle += 'background-position: ' + x + ' ' + y + ';'
-    -
-    - if (options.img.size)
-      - imgStyle += 'background-size: ' + options.img.size + ';'
+    options = options ? options : {};
+    options.outer = options.outer ? options.outer : {};
+    options.inner = options.inner ? options.inner : {};
+    options.img = options.img ? options.img : {};
+
+    let outerStyle = '';
+    if (options.outer.width) {
+      outerStyle += 'width: ' + options.outer.width + ';';
+    }
+
+    if (options.outer.height) {
+      outerStyle += 'height: ' + options.outer.height + ';';
+    }
+
+    let innerStyle = '';
+    if (options.inner.width) {
+      innerStyle += 'width: ' + options.inner.width + ';';
+    }
+
+    if (options.inner.height) {
+      innerStyle += 'height: ' + options.inner.height + ';';
+    }
+
+    let imgStyle = '';
+    if (options.img.src) {
+      imgStyle += 'background-image: url(\'' + options.img.src + '\');';
+      imgStyle += 'background-color: transparent;';
+
+      if (options.img.x || options.img.y) {
+        let x, y;
+        x = options.img.x ? options.img.x : '0';
+        y = options.img.y ? options.img.y : '0';
+        imgStyle += 'background-position: ' + x + ' ' + y + ';';
+      }
+
+      if (options.img.size) {
+        imgStyle += 'background-size: ' + options.img.size + ';';
+      }
+    }
 
   .circle(class=options.classname, style=outerStyle)
     .circle__inner(style=innerStyle+imgStyle)

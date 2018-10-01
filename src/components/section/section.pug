@@ -1,8 +1,9 @@
 include ../circle/circle.pug
 
 mixin section(options)
-  - options = options ? options : {}
-  - let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\');' : 'display: none;'
+  -
+    options = options ? options : {};
+    let iconStyle = options.icon ? 'background-image: url(\'' + options.icon + '\');' : 'display: none;';
 
   section.section(class=options.classname)
     header.section__header

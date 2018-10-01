@@ -1,11 +1,13 @@
 mixin progress-bar(options)
-  - options = options ? options : {}
-  - options.progress = options.progress ? options.progress : 0
   -
-  - if (options.progress < 0)
-    - options.progress = 0
-  - else if (options.progress > 100)
-    - options.progress = 100
+    options = options ? options : {};
+    options.progress = options.progress ? options.progress : 0;
+
+    if (options.progress < 0) {
+      options.progress = 0;
+    } else if (options.progress > 100) {
+      options.progress = 100;
+    }
 
   .progress-bar(class=options.classname)
     .progress-bar__title=options.title

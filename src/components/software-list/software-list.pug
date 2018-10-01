@@ -1,9 +1,10 @@
 include ../progress-bar/progress-bar.pug
 
 mixin software-list(options)
-  - options = options ? options : {}
-  - options.classname = options.classname ? options.classname : ''
-  - options.software = options.software ? options.software : []
+  -
+    options = options ? options : {};
+    options.classname = options.classname ? options.classname : '';
+    options.software = options.software ? options.software : [];
 
   .software-list(class=options.classname)
     .software-list__col-1
