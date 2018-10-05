@@ -1,21 +1,112 @@
 @require '../section/section.styl'
 @require '../contact-list/contact-list.styl'
 
+$icon-size = 143px
+$icon-margin-right = 24px
+
+$title-margin-right = 12px
+$title-margin-bottom = 9px
+
+$line-margin-right = 1px
+$line-margin-bottom = 4px
+
+$contact-list-margin-top = -3px
+
 .section_contact
   .section
     &__icon
-      width 143px
-      height 143px
+      width $icon-size
+      height $icon-size
 
-      margin-right 24px
+      margin-right $icon-margin-right
 
     &__title
-      margin-right 12px
-      margin-bottom 9px
+      margin-right $title-margin-right
+      margin-bottom $title-margin-bottom
 
     &__line
-      margin-right 1px
-      margin-bottom 4px
+      margin-right $line-margin-right
+      margin-bottom $line-margin-bottom
 
   .contact-list
-    margin-top -3px
+    margin-top $contact-list-margin-top
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .section_contact
+    .section
+      &__icon
+        width $icon-size * $k50
+        height $icon-size * $k50
+        margin-right $icon-margin-right * $k50
+
+      &__title
+        margin-right $title-margin-right * $k50
+        margin-bottom $title-margin-bottom * $k50
+
+      &__line
+        margin-right $line-margin-right * $k50
+        margin-bottom $line-margin-bottom * $k50
+
+    .contact-list
+      margin-top $contact-list-margin-top * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .section_contact
+    .section
+      &__icon
+        width $icon-size * $k60
+        height $icon-size * $k60
+        margin-right $icon-margin-right * $k60
+
+      &__title
+        margin-right $title-margin-right * $k60
+        margin-bottom $title-margin-bottom * $k60
+
+      &__line
+        margin-right $line-margin-right * $k60
+        margin-bottom $line-margin-bottom * $k60
+
+    .contact-list
+      margin-top $contact-list-margin-top * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .section_contact
+    .section
+      &__icon
+        width $icon-size * $k70
+        height $icon-size * $k70
+        margin-right $icon-margin-right * $k70
+
+      &__title
+        margin-right $title-margin-right * $k70
+        margin-bottom $title-margin-bottom * $k70
+
+      &__line
+        margin-right $line-margin-right * $k70
+        margin-bottom $line-margin-bottom * $k70
+
+    .contact-list
+      margin-top $contact-list-margin-top * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .section_contact
+    .section
+      &__icon
+        width $icon-size * $k80
+        height $icon-size * $k80
+        margin-right $icon-margin-right * $k80
+
+      &__title
+        margin-right $title-margin-right * $k80
+        margin-bottom $title-margin-bottom * $k80
+
+      &__line
+        margin-right $line-margin-right * $k80
+        margin-bottom $line-margin-bottom * $k80
+
+    .contact-list
+      margin-top $contact-list-margin-top * $k80
