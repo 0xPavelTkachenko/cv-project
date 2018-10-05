@@ -1,6 +1,37 @@
 @require '../section/section.styl'
 
+$content-padding-top = 21px
+$content-padding-left = 1px
+
 .section_profile
   .section__content
-    padding-top 21px
-    padding-left 1px
+    padding-top $content-padding-top
+    padding-left $content-padding-left
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * $k50
+      padding-left $content-padding-left * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * $k60
+      padding-left $content-padding-left * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * $k70
+      padding-left $content-padding-left * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * $k80
+      padding-left $content-padding-left * $k80
