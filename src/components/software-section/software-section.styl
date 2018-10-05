@@ -1,19 +1,96 @@
 @require '../section/section.styl'
 @require '../software-list/software-list.styl'
 
+$icon-margin-right = 38px
+
+$title-margin-right = 45px
+$title-margin-bottom = -2px
+
+$line-margin-bottom = -8px
+
+$content-padding-top = 60px
+
 .section_software
   .section
     &__icon
-      margin-right 38px
+      margin-right $icon-margin-right
 
     &__title
-      margin-right 45px
-      margin-bottom -2px
+      margin-right $title-margin-right
+      margin-bottom $title-margin-bottom
 
     &__line
       margin-left 0
       margin-right 0
-      margin-bottom -8px
+      margin-bottom $line-margin-bottom
 
     &__content
-      padding-top 60px
+      padding-top $content-padding-top
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .section_software
+    .section
+      &__icon
+        margin-right $icon-margin-right * $k50
+
+      &__title
+        margin-right $title-margin-right * $k50
+        margin-bottom $title-margin-bottom * $k50
+
+      &__line
+        margin-bottom $line-margin-bottom * $k50
+
+      &__content
+        padding-top $content-padding-top * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .section_software
+    .section
+      &__icon
+        margin-right $icon-margin-right * $k60
+
+      &__title
+        margin-right $title-margin-right * $k60
+        margin-bottom $title-margin-bottom * $k60
+
+      &__line
+        margin-bottom $line-margin-bottom * $k60
+
+      &__content
+        padding-top $content-padding-top * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .section_software
+    .section
+      &__icon
+        margin-right $icon-margin-right * $k70
+
+      &__title
+        margin-right $title-margin-right * $k70
+        margin-bottom $title-margin-bottom * $k70
+
+      &__line
+        margin-bottom $line-margin-bottom * $k70
+
+      &__content
+        padding-top $content-padding-top * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .section_software
+    .section
+      &__icon
+        margin-right $icon-margin-right * $k80
+
+      &__title
+        margin-right $title-margin-right * $k80
+        margin-bottom $title-margin-bottom * $k80
+
+      &__line
+        margin-bottom $line-margin-bottom * $k80
+
+      &__content
+        padding-top $content-padding-top * $k80
