@@ -1,3 +1,17 @@
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$timeline-margin-left = 415px
+
+$subtitle-margin-top = 5px
+$subtitle-margin-left = -3px
+
+$content-line-height = 37px
+$content-word-spacing = -0.5px
+$content-margin-top = 12px
+
 .period
   &__title, &__subtitle, &__timeline
     font-size 4.3rem
@@ -11,7 +25,7 @@
     float left
 
   &__timeline
-    margin-left 415px
+    margin-left $timeline-margin-left
 
   &__timeline::before
     content '// '
@@ -19,14 +33,74 @@
   &__subtitle
     clear both
 
-    margin-top 5px
-    margin-left -3px
+    margin-top $subtitle-margin-top
+    margin-left $subtitle-margin-left
 
   &__content
     font-size 2.585rem
 
-    line-height 37px
+    line-height $content-line-height
 
-    word-spacing -0.5px
+    word-spacing $content-word-spacing
 
-    margin-top 12px
+    margin-top $content-margin-top
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .period
+    &__timeline
+      margin-left $timeline-margin-left * $k50
+
+    &__subtitle
+      margin-top $subtitle-margin-top * $k50
+      margin-left $subtitle-margin-left * $k50
+
+    &__content
+      line-height $content-line-height * $k50
+      word-spacing $content-word-spacing * $k50
+      margin-top $content-margin-top * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .period
+    &__timeline
+      margin-left $timeline-margin-left * $k60
+
+    &__subtitle
+      margin-top $subtitle-margin-top * $k60
+      margin-left $subtitle-margin-left * $k60
+
+    &__content
+      line-height $content-line-height * $k60
+      word-spacing $content-word-spacing * $k60
+      margin-top $content-margin-top * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .period
+    &__timeline
+      margin-left $timeline-margin-left * $k70
+
+    &__subtitle
+      margin-top $subtitle-margin-top * $k70
+      margin-left $subtitle-margin-left * $k70
+
+    &__content
+      line-height $content-line-height * $k70
+      word-spacing $content-word-spacing * $k70
+      margin-top $content-margin-top * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .period
+    &__timeline
+      margin-left $timeline-margin-left * $k80
+
+    &__subtitle
+      margin-top $subtitle-margin-top * $k80
+      margin-left $subtitle-margin-left * $k80
+
+    &__content
+      line-height $content-line-height * $k80
+      word-spacing $content-word-spacing * $k80
+      margin-top $content-margin-top * $k80
