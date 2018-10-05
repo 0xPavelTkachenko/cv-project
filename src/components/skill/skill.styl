@@ -1,3 +1,14 @@
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$mark-size = 35px
+$mark-margin-right = 20px
+
+$powerbar-margin-left = 5px
+$powerbar-margin-top = 30px
+
 .skill
   &__title
     text-align center
@@ -10,14 +21,14 @@
 
     justify-content center
 
-    margin-left 5px
-    margin-top 30px
+    margin-left $powerbar-margin-left
+    margin-top $powerbar-margin-top
 
   &__mark
-    width 35px
-    height 35px
+    width $mark-size
+    height $mark-size
 
-    margin-right 20px
+    margin-right $mark-margin-right
 
     border-radius 100%
 
@@ -26,3 +37,51 @@
 
     &_disabled
       background-color #e6e6e6
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .skill
+    &__mark
+      width $mark-size * $k50
+      height $mark-size * $k50
+      margin-right $mark-margin-right * $k50
+
+    &__powerbar
+      margin-left $powerbar-margin-left * $k50
+      margin-top $powerbar-margin-top * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .skill
+    &__mark
+      width $mark-size * $k60
+      height $mark-size * $k60
+      margin-right $mark-margin-right * $k60
+
+    &__powerbar
+      margin-left $powerbar-margin-left * $k60
+      margin-top $powerbar-margin-top * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .skill
+    &__mark
+      width $mark-size * $k70
+      height $mark-size * $k70
+      margin-right $mark-margin-right * $k70
+
+    &__powerbar
+      margin-left $powerbar-margin-left * $k70
+      margin-top $powerbar-margin-top * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .skill
+    &__mark
+      width $mark-size * $k80
+      height $mark-size * $k80
+      margin-right $mark-margin-right * $k80
+
+    &__powerbar
+      margin-left $powerbar-margin-left * $k80
+      margin-top $powerbar-margin-top * $k80
