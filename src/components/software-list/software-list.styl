@@ -1,15 +1,61 @@
 @require '../progress-bar/progress-bar.styl'
 
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$padding-left = 15px
+$padding-right = 5px
+
+$item-margin-bottom = 50px
+
 .software-list
   display flex
 
   justify-content space-between
 
-  padding-left 15px
-  padding-right 5px
+  padding-left $padding-left
+  padding-right $padding-right
 
   &__col-1, &__col-2
     width 44.35%
 
   &__item
-    margin-bottom 50px
+    margin-bottom $item-margin-bottom
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .software-list
+    padding-left $padding-left * $k50
+    padding-right $padding-right * $k50
+
+    &__item
+      margin-bottom $item-margin-bottom * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .software-list
+    padding-left $padding-left * $k60
+    padding-right $padding-right * $k60
+
+    &__item
+      margin-bottom $item-margin-bottom * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .software-list
+    padding-left $padding-left * $k70
+    padding-right $padding-right * $k70
+
+    &__item
+      margin-bottom $item-margin-bottom * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .software-list
+    padding-left $padding-left * $k80
+    padding-right $padding-right * $k80
+
+    &__item
+      margin-bottom $item-margin-bottom * $k80
