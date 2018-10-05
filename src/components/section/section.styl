@@ -1,20 +1,41 @@
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$icon-size = 148px
+$icon-margin-right = 19px
+
+$title-margin-right = 13px
+$title-margin-bottom = 10px
+$title-letter-spacing = 1px
+
+$line-size = 10px
+$line-margin-bottom = 4px
+
+$content-line-height = 37px
+$content-word-spacing = -0.5px
+
 .section
   &__header
     display flex
     align-items center
 
   &__icon
-    width 148px
-    height 148px
+    width $icon-size
+    height $icon-size
 
     background-repeat no-repeat
     background-size contain
     background-position center center
 
-    margin-right 19px
+    margin-right $icon-margin-right
 
   &__title
-    margin 0 13px 10px 0
+    margin-top 0
+    margin-right $title-margin-right
+    margin-bottom $title-margin-bottom
+    margin-left 0
 
     color #006cb4
 
@@ -23,20 +44,116 @@
     font-size 6.75rem
     font-weight bold
 
-    letter-spacing 1px
+    letter-spacing $title-letter-spacing
 
   &__line
     flex-grow 1
 
-    height 10px
+    height $line-size
 
     background-color #006cb4
 
-    margin-bottom 4px
+    margin-bottom $line-margin-bottom
 
   &__content
     font-size 2.585rem
 
-    line-height 37px
+    line-height $content-line-height
 
-    word-spacing -0.5px
+    word-spacing $content-word-spacing
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .section
+    &__icon
+      width $icon-size * $k50
+      height $icon-size * $k50
+      margin-right $icon-margin-right * $k50
+
+    &__line
+      height $line-size * $k50
+
+    &__title
+      margin-right $title-margin-right * $k50
+      margin-bottom $title-margin-bottom * $k50
+      letter-spacing $title-letter-spacing * $k50
+
+    &__line
+      height $line-size * $k50
+      margin-bottom $line-margin-bottom * $k50
+
+    &__content
+      line-height $content-line-height * $k50
+      word-spacing $content-word-spacing * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .section
+    &__icon
+      width $icon-size * $k60
+      height $icon-size * $k60
+      margin-right $icon-margin-right * $k60
+
+    &__line
+      height $line-size * $k60
+
+    &__title
+      margin-right $title-margin-right * $k60
+      margin-bottom $title-margin-bottom * $k60
+      letter-spacing $title-letter-spacing * $k60
+
+    &__line
+      height $line-size * $k60
+      margin-bottom $line-margin-bottom * $k60
+
+    &__content
+      line-height $content-line-height * $k60
+      word-spacing $content-word-spacing * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .section
+    &__icon
+      width $icon-size * $k70
+      height $icon-size * $k70
+      margin-right $icon-margin-right * $k70
+
+    &__line
+      height $line-size * $k70
+
+    &__title
+      margin-right $title-margin-right * $k70
+      margin-bottom $title-margin-bottom * $k70
+      letter-spacing $title-letter-spacing * $k70
+
+    &__line
+      height $line-size * $k70
+      margin-bottom $line-margin-bottom * $k70
+
+    &__content
+      line-height $content-line-height * $k70
+      word-spacing $content-word-spacing * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .section
+    &__icon
+      width $icon-size * $k80
+      height $icon-size * $k80
+      margin-right $icon-margin-right * $k80
+
+    &__line
+      height $line-size * $k80
+
+    &__title
+      margin-right $title-margin-right * $k80
+      margin-bottom $title-margin-bottom * $k80
+      letter-spacing $title-letter-spacing * $k80
+
+    &__line
+      height $line-size * $k80
+      margin-bottom $line-margin-bottom * $k80
+
+    &__content
+      line-height $content-line-height * $k80
+      word-spacing $content-word-spacing * $k80
