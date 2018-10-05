@@ -1,5 +1,14 @@
 @require '../contact/contact.styl'
 
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$border-spacing-v = 72px
+
+$contact-title-padding-right = 79px
+
 .contact-list
   display table
 
@@ -13,3 +22,39 @@
 
     &__title
       padding-right 79px
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .contact-list
+    border-spacing 0 $border-spacing-v * $k50
+
+    .contact
+      &__title
+        padding-right $contact-title-padding-right * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .contact-list
+    border-spacing 0 $border-spacing-v * $k60
+
+    .contact
+      &__title
+        padding-right $contact-title-padding-right * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .contact-list
+    border-spacing 0 $border-spacing-v * $k70
+
+    .contact
+      &__title
+        padding-right $contact-title-padding-right * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .contact-list
+    border-spacing 0 $border-spacing-v * $k80
+
+    .contact
+      &__title
+        padding-right $contact-title-padding-right * $k80
