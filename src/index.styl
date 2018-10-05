@@ -7,6 +7,24 @@
 @import 'components/exp-section/exp-section.styl'
 @import 'components/education-section/education-section.styl'
 
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$font-size = 12px
+
+$body-padding-top = 152px
+
+$col-1-padding-top = 24px
+$col-1-padding-left = 8px
+
+$person-card-margin-bottom = 149px
+$section-profile-margin-bottom = 91px
+$section-contact-margin-bottom = 31px
+$section-education-margin-bottom = 101px
+$section-exp-margin-bottom = 102px
+
 html
   font-size 12px
 
@@ -14,10 +32,11 @@ body
   margin 0
   padding 0
 
-  padding-top 152px
+  padding-top $body-padding-top
 
 .main-wrapper
   width 90.8%
+  min-width 600px
 
   margin 0 auto
 
@@ -30,23 +49,152 @@ body
   &__col-1
     width 36.8%
 
-    padding-top 24px
-    padding-left 8px
+    padding-top $col-1-padding-top
+    padding-left $col-1-padding-left
 
     .person-card
-      margin-bottom 149px
+      margin-bottom $person-card-margin-bottom
 
     .section_profile
-      margin-bottom 91px
+      margin-bottom $section-profile-margin-bottom
 
     .section_contact
-      margin-bottom 31px
+      margin-bottom $section-contact-margin-bottom
 
   &__col-2
     width 56.2%
 
     .section_education
-      margin-bottom 101px
+      margin-bottom $section-education-margin-bottom
 
     .section_exp
-      margin-bottom 102px
+      margin-bottom $section-exp-margin-bottom
+
+// < 960px
+@media only screen and (max-width: 960px)
+  html
+    font-size $font-size * $k50
+
+  .main-wrapper
+    flex-direction column
+
+    &__col-1, &__col-2
+      width 100%
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1440px)
+  html
+    font-size $font-size * $k50
+
+  body
+    padding-top $body-padding-top * $k50
+
+  .main-wrapper
+    flex-direction row
+
+    &__col-1
+      padding-top $col-1-padding-top * $k50
+      padding-left $col-1-padding-left * $k50
+
+      .person-card
+        margin-bottom $person-card-margin-bottom * $k50
+
+      .section_profile
+        margin-bottom $section-profile-margin-bottom * $k50
+
+      .section_contact
+        margin-bottom $section-contact-margin-bottom * $k50
+
+    &__col-2
+      .section_education
+        margin-bottom $section-education-margin-bottom * $k50
+
+      .section_exp
+        margin-bottom $section-exp-margin-bottom * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1680px)
+  html
+    font-size $font-size * $k60
+
+  body
+    padding-top $body-padding-top * $k60
+
+  .main-wrapper
+    &__col-1
+      padding-top $col-1-padding-top * $k60
+      padding-left $col-1-padding-left * $k60
+
+      .person-card
+        margin-bottom $person-card-margin-bottom * $k60
+
+      .section_profile
+        margin-bottom $section-profile-margin-bottom * $k60
+
+      .section_contact
+        margin-bottom $section-contact-margin-bottom * $k60
+
+    &__col-2
+      .section_education
+        margin-bottom $section-education-margin-bottom * $k60
+
+      .section_exp
+        margin-bottom $section-exp-margin-bottom * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1920px)
+  html
+    font-size $font-size * $k70
+
+  body
+    padding-top $body-padding-top * $k70
+
+  .main-wrapper
+    &__col-1
+      padding-top $col-1-padding-top * $k70
+      padding-left $col-1-padding-left * $k70
+
+      .person-card
+        margin-bottom $person-card-margin-bottom * $k70
+
+      .section_profile
+          margin-bottom $section-profile-margin-bottom * $k70
+
+      .section_contact
+        margin-bottom $section-contact-margin-bottom * $k70
+
+    &__col-2
+      .section_education
+        margin-bottom $section-education-margin-bottom * $k70
+
+      .section_exp
+        margin-bottom $section-exp-margin-bottom * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2048px)
+  html
+    font-size $font-size * $k80
+
+  body
+    padding-top $body-padding-top * $k80
+
+  .main-wrapper
+    &__col-1
+      padding-top $col-1-padding-top * $k80
+      padding-left $col-1-padding-left * $k80
+
+      .person-card
+        margin-bottom $person-card-margin-bottom * $k80
+
+      .section_profile
+        margin-bottom $section-profile-margin-bottom * $k80
+
+      .section_contact
+        margin-bottom $section-contact-margin-bottom * $k80
+
+    &__col-2
+      .section_education
+        margin-bottom $section-education-margin-bottom * $k80
+
+      .section_exp
+        margin-bottom $section-exp-margin-bottom * $k80
