@@ -1,3 +1,10 @@
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$title-letter-spacing = 1px
+
 .contact
   &__title
     color #006cb4
@@ -7,7 +14,31 @@
     font-size 3.33rem
     font-weight bold
 
-    letter-spacing 1px
+    letter-spacing $title-letter-spacing
 
   &__content
     font-size 3.42rem
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * $k80
