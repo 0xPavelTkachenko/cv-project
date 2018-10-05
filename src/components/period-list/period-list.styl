@@ -1,5 +1,19 @@
 @require '../period/period.styl'
 
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$item-margin-bottom = 34px
+$item-before-left = -95px
+$item-before-top = -24px
+
+$period-subtitle-margin-top = 31px
+$period-subtitle-margin-left = -2px
+$period-content-margin-top = 24px
+$period-content-margin-left = 3px
+
 .period-list
   margin 0
   padding 0
@@ -9,21 +23,97 @@
 
     list-style-type none
 
-    margin-bottom 34px
+    margin-bottom $item-margin-bottom
 
   &__item::before
     content '\b7'
     font-size 27.08rem
     float left
     position absolute
-    left -95px
-    top -24px
+    left $item-before-left
+    top $item-before-top
 
   .period
     &__subtitle
-      margin-top 31px
-      margin-left -2px
+      margin-top $period-subtitle-margin-top
+      margin-left $period-subtitle-margin-left
 
     &__content
-      margin-top 24px
-      margin-left 3px
+      margin-top $period-content-margin-top
+      margin-left $period-content-margin-left
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .period-list
+    &__item
+      margin-bottom $item-margin-bottom * $k50
+
+    &__item::before
+      left $item-before-left * $k50
+      top $item-before-top * $k50
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * $k50
+        margin-left $period-subtitle-margin-left * $k50
+
+      &__content
+        margin-top $period-content-margin-top * $k50
+        margin-left $period-content-margin-left * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .period-list
+    &__item
+      margin-bottom $item-margin-bottom * $k60
+
+    &__item::before
+      left $item-before-left * $k60
+      top $item-before-top * $k60
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * $k60
+        margin-left $period-subtitle-margin-left * $k60
+
+      &__content
+        margin-top $period-content-margin-top * $k60
+        margin-left $period-content-margin-left * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .period-list
+    &__item
+      margin-bottom $item-margin-bottom * $k70
+
+    &__item::before
+      left $item-before-left * $k70
+      top $item-before-top * $k70
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * $k70
+        margin-left $period-subtitle-margin-left * $k70
+
+      &__content
+        margin-top $period-content-margin-top * $k70
+        margin-left $period-content-margin-left * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .period-list
+    &__item
+      margin-bottom $item-margin-bottom * $k80
+
+    &__item::before
+      left $item-before-left * $k80
+      top $item-before-top * $k80
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * $k80
+        margin-left $period-subtitle-margin-left * $k80
+
+      &__content
+        margin-top $period-content-margin-top * $k80
+        margin-left $period-content-margin-left * $k80
