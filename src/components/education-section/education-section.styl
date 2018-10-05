@@ -1,25 +1,112 @@
 @require '../section/section.styl'
 @require '../period-list/period-list.styl'
 
+$icon-margin-top = -3px
+$icon-margin-right = 38px
+
+$title-margin-bottom = 15px
+$title-margin-right = 15px
+
+$line-margin-bottom = 7px
+
+$content-padding-left = 105px
+$content-padding-top = 60px
+
 .section_education
   .section
     &__icon
-      margin-top -3px
-      margin-right 38px
+      margin-top $icon-margin-top
+      margin-right $icon-margin-right
 
     &__title
-      margin-bottom 15px
-      margin-right 15px
+      margin-bottom $title-margin-bottom
+      margin-right $title-margin-right
 
     &__line
-      margin-bottom 7px
+      margin-bottom $line-margin-bottom
       margin-right 0
       margin-left 0
 
     &__content
-      padding-left 105px
-      padding-top 60px
+      padding-left $content-padding-left
+      padding-top $content-padding-top
 
   .period
     &__title
       color #006cb4
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * $k50
+        margin-right $icon-margin-right * $k50
+
+      &__title
+        margin-bottom $title-margin-bottom * $k50
+        margin-right $title-margin-right * $k50
+
+      &__line
+        margin-bottom $line-margin-bottom * $k50
+
+      &__content
+        padding-left $content-padding-left * $k50
+        padding-top $content-padding-top * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * $k60
+        margin-right $icon-margin-right * $k60
+
+      &__title
+        margin-bottom $title-margin-bottom * $k60
+        margin-right $title-margin-right * $k60
+
+      &__line
+        margin-bottom $line-margin-bottom * $k60
+
+      &__content
+        padding-left $content-padding-left * $k60
+        padding-top $content-padding-top * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * $k70
+        margin-right $icon-margin-right * $k70
+
+      &__title
+        margin-bottom $title-margin-bottom * $k70
+        margin-right $title-margin-right * $k70
+
+      &__line
+        margin-bottom $line-margin-bottom * $k70
+
+      &__content
+        padding-left $content-padding-left * $k70
+        padding-top $content-padding-top * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * $k80
+        margin-right $icon-margin-right * $k80
+
+      &__title
+        margin-bottom $title-margin-bottom * $k80
+        margin-right $title-margin-right * $k80
+
+      &__line
+        margin-bottom $line-margin-bottom * $k80
+
+      &__content
+        padding-left $content-padding-left * $k80
+        padding-top $content-padding-top * $k80
