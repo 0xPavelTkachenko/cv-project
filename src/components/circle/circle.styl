@@ -1,6 +1,14 @@
+$k50 = 0.5
+$k60 = 0.6
+$k70 = 0.7
+$k80 = 0.8
+
+$circle-size = 462px
+$circle-size-inner = 405px
+
 .circle
-  width 462px
-  height 462px
+  width $circle-size
+  height $circle-size
 
   border 1px solid #006cb4
   border-radius 100%
@@ -8,8 +16,8 @@
   position relative
 
   &__inner
-    width 405px
-    height 405px
+    width $circle-size-inner
+    height $circle-size-inner
 
     border-radius 100%
 
@@ -23,3 +31,43 @@
     bottom 0
 
     margin auto
+
+// 50%
+@media only screen and (min-width: 960px) and (max-width: 1439px)
+  .circle
+    width $circle-size * $k50
+    height $circle-size * $k50
+
+    &__inner
+      width $circle-size-inner * $k50
+      height $circle-size-inner * $k50
+
+// 60%
+@media only screen and (min-width: 1440px) and (max-width: 1679px)
+  .circle
+    width $circle-size * $k60
+    height $circle-size * $k60
+
+    &__inner
+      width $circle-size-inner * $k60
+      height $circle-size-inner * $k60
+
+// 70%
+@media only screen and (min-width: 1680px) and (max-width: 1919px)
+  .circle
+    width $circle-size * $k70
+    height $circle-size * $k70
+
+    &__inner
+      width $circle-size-inner * $k70
+      height $circle-size-inner * $k70
+
+// 80%
+@media only screen and (min-width: 1920px) and (max-width: 2047px)
+  .circle
+    width $circle-size * $k80
+    height $circle-size * $k80
+
+    &__inner
+      width $circle-size-inner * $k80
+      height $circle-size-inner * $k80
