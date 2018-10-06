@@ -1,5 +1,6 @@
 @require '../contact/contact.styl'
 
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -23,8 +24,17 @@ $contact-title-padding-right = 79px
     &__title
       padding-right 79px
 
+// 40%
+@media only screen and (max-width: 992px)
+  .contact-list
+    border-spacing 0 $border-spacing-v * $k40
+
+    .contact
+      &__title
+        padding-right $contact-title-padding-right * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .contact-list
     border-spacing 0 $border-spacing-v * $k50
 
