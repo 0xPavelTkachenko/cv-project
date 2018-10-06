@@ -1,3 +1,4 @@
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -62,8 +63,32 @@ $content-word-spacing = -0.5px
 
     word-spacing $content-word-spacing
 
+// 40%
+@media only screen and (max-width: 992px)
+  .section
+    &__icon
+      width $icon-size * $k40
+      height $icon-size * $k40
+      margin-right $icon-margin-right * $k40
+
+    &__line
+      height $line-size * $k40
+
+    &__title
+      margin-right $title-margin-right * $k40
+      margin-bottom $title-margin-bottom * $k40
+      letter-spacing $title-letter-spacing * $k40
+
+    &__line
+      height $line-size * $k40
+      margin-bottom $line-margin-bottom * $k40
+
+    &__content
+      line-height $content-line-height * $k40
+      word-spacing $content-word-spacing * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .section
     &__icon
       width $icon-size * $k50
