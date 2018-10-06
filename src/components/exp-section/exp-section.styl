@@ -33,8 +33,29 @@ $content-padding-top = 90px
       padding-left $content-padding-left
       padding-top $content-padding-top
 
+// 40%
+@media only screen and (max-width: 992px)
+  .section_exp
+    .section
+      &__icon
+        width $icon-size * $k40
+        height $icon-size * $k40
+
+        margin-right $icon-margin-right * $k40
+
+      &__title
+        margin-bottom $title-margin-bottom * $k40
+        margin-right $title-margin-right * $k40
+
+      &__line
+        margin-bottom $line-margin-bottom * $k40
+
+      &__content
+        padding-left $content-padding-left * $k40
+        padding-top $content-padding-top * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .section_exp
     .section
       &__icon
