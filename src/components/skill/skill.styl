@@ -1,3 +1,4 @@
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -38,8 +39,20 @@ $powerbar-margin-top = 30px
     &_disabled
       background-color #e6e6e6
 
+// 40%
+@media only screen and (max-width: 992px)
+  .skill
+    &__mark
+      width $mark-size * $k40
+      height $mark-size * $k40
+      margin-right $mark-margin-right * $k40
+
+    &__powerbar
+      margin-left $powerbar-margin-left * $k40
+      margin-top $powerbar-margin-top * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .skill
     &__mark
       width $mark-size * $k50
