@@ -1,3 +1,4 @@
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -19,8 +20,14 @@ $title-letter-spacing = 1px
   &__content
     font-size 3.42rem
 
+// 40%
+@media only screen and (max-width: 992px)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .contact
     &__title
       letter-spacing $title-letter-spacing * $k50
