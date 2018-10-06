@@ -1,3 +1,4 @@
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -32,8 +33,18 @@ $circle-size-inner = 405px
 
     margin auto
 
+// 40%
+@media only screen and (max-width: 992px)
+  .circle
+    width $circle-size * $k40
+    height $circle-size * $k40
+
+    &__inner
+      width $circle-size-inner * $k40
+      height $circle-size-inner * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .circle
     width $circle-size * $k50
     height $circle-size * $k50
