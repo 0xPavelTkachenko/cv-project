@@ -1,5 +1,6 @@
 @require '../circle/circle.styl'
 
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -48,8 +49,25 @@ $job-letter-spacing = -1px
 
     letter-spacing $job-letter-spacing
 
+// 40%
+@media only screen and (max-width: 992px)
+  .person-card
+    padding-left $padding-left * $k40
+
+    &__name
+      margin-top $name-margin-top * $k40
+      word-spacing $name-word-spacing * $k40
+
+    &__surname
+      margin-top $surname-margin-top * $k40
+      letter-spacing $surname-letter-spacing * $k40
+
+    &__job
+      margin-left $job-margin-left * $k40
+      letter-spacing $job-letter-spacing * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .person-card
     padding-left $padding-left * $k50
 
