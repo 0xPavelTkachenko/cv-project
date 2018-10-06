@@ -7,6 +7,7 @@
 @import 'components/exp-section/exp-section.styl'
 @import 'components/education-section/education-section.styl'
 
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -16,8 +17,14 @@ $font-size = 12px
 
 $body-padding-top = 152px
 
+$main-wrapper-width = 90.8%
+$main-wrapper-min-width = 600px
+
+$col-1-width = 36.8%
 $col-1-padding-top = 24px
 $col-1-padding-left = 8px
+
+$col-2-width = 56.2%
 
 $person-card-margin-bottom = 149px
 $section-profile-margin-bottom = 91px
@@ -26,7 +33,7 @@ $section-education-margin-bottom = 101px
 $section-exp-margin-bottom = 102px
 
 html
-  font-size 12px
+  font-size $font-size
 
 body
   margin 0
@@ -35,8 +42,8 @@ body
   padding-top $body-padding-top
 
 .main-wrapper
-  width 90.8%
-  min-width 600px
+  width $main-wrapper-width
+  min-width $main-wrapper-min-width
 
   margin 0 auto
 
@@ -47,7 +54,7 @@ body
   justify-content space-between
 
   &__col-1
-    width 36.8%
+    width $col-1-width
 
     padding-top $col-1-padding-top
     padding-left $col-1-padding-left
@@ -62,7 +69,7 @@ body
       margin-bottom $section-contact-margin-bottom
 
   &__col-2
-    width 56.2%
+    width $col-2-width
 
     .section_education
       margin-bottom $section-education-margin-bottom
@@ -70,10 +77,10 @@ body
     .section_exp
       margin-bottom $section-exp-margin-bottom
 
-// < 960px
+// <= 960px
 @media only screen and (max-width: 960px)
   html
-    font-size $font-size * $k50
+    font-size $font-size * $k40
 
   .main-wrapper
     flex-direction column
@@ -89,8 +96,43 @@ body
       .section_education, .section_exp
         margin-bottom 60px
 
+// 40%
+@media only screen and (min-width: 960px) and (max-width: 992px)
+  html
+    font-size $font-size * $k40
+
+  body
+    padding-top $body-padding-top * $k40
+
+  .main-wrapper
+    flex-direction row
+
+    &__col-1
+      width $col-1-width
+
+      padding-top $col-1-padding-top * $k40
+      padding-left $col-1-padding-left * $k40
+
+      .person-card
+        margin-bottom $person-card-margin-bottom * $k40
+
+      .section_profile
+        margin-bottom $section-profile-margin-bottom * $k40
+
+      .section_contact
+        margin-bottom $section-contact-margin-bottom * $k40
+
+    &__col-2
+      width $col-2-width
+
+      .section_education
+        margin-bottom $section-education-margin-bottom * $k40
+
+      .section_exp
+        margin-bottom $section-exp-margin-bottom * $k40
+
 // 50%
-@media only screen and (min-width: 960px) and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   html
     font-size $font-size * $k50
 
@@ -98,8 +140,6 @@ body
     padding-top $body-padding-top * $k50
 
   .main-wrapper
-    flex-direction row
-
     &__col-1
       padding-top $col-1-padding-top * $k50
       padding-left $col-1-padding-left * $k50
