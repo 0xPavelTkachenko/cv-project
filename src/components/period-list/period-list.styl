@@ -1,5 +1,6 @@
 @require '../period/period.styl'
 
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -42,8 +43,27 @@ $period-content-margin-left = 3px
       margin-top $period-content-margin-top
       margin-left $period-content-margin-left
 
+// 40%
+@media only screen and (max-width: 992px)
+  .period-list
+    &__item
+      margin-bottom $item-margin-bottom * $k40
+
+    &__item::before
+      left $item-before-left * $k40
+      top $item-before-top * $k40
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * $k40
+        margin-left $period-subtitle-margin-left * $k40
+
+      &__content
+        margin-top $period-content-margin-top * $k40
+        margin-left $period-content-margin-left * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .period-list
     &__item
       margin-bottom $item-margin-bottom * $k50
