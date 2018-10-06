@@ -8,8 +8,15 @@ $content-padding-left = 1px
     padding-top $content-padding-top
     padding-left $content-padding-left
 
+// 40%
+@media only screen and (max-width: 992px)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * $k40
+      padding-left $content-padding-left * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .section_profile
     .section__content
       padding-top $content-padding-top * $k50
