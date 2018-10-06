@@ -1,5 +1,6 @@
 @require '../progress-bar/progress-bar.styl'
 
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -24,8 +25,17 @@ $item-margin-bottom = 50px
   &__item
     margin-bottom $item-margin-bottom
 
+// 40%
+@media only screen and (max-width: 992px)
+  .software-list
+    padding-left $padding-left * $k40
+    padding-right $padding-right * $k40
+
+    &__item
+      margin-bottom $item-margin-bottom * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .software-list
     padding-left $padding-left * $k50
     padding-right $padding-right * $k50
