@@ -1,3 +1,4 @@
+$k40 = 0.4
 $k50 = 0.5
 $k60 = 0.6
 $k70 = 0.7
@@ -45,8 +46,23 @@ $content-margin-top = 12px
 
     margin-top $content-margin-top
 
+// 40%
+@media only screen and (max-width: 992px)
+  .period
+    &__timeline
+      margin-left $timeline-margin-left * $k40
+
+    &__subtitle
+      margin-top $subtitle-margin-top * $k40
+      margin-left $subtitle-margin-left * $k40
+
+    &__content
+      line-height $content-line-height * $k40
+      word-spacing $content-word-spacing * $k40
+      margin-top $content-margin-top * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .period
     &__timeline
       margin-left $timeline-margin-left * $k50
