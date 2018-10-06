@@ -27,8 +27,25 @@ $content-padding-top = 60px
     &__content
       padding-top $content-padding-top
 
+// 40%
+@media only screen and (max-width: 992px)
+  .section_software
+    .section
+      &__icon
+        margin-right $icon-margin-right * $k40
+
+      &__title
+        margin-right $title-margin-right * $k40
+        margin-bottom $title-margin-bottom * $k40
+
+      &__line
+        margin-bottom $line-margin-bottom * $k40
+
+      &__content
+        padding-top $content-padding-top * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .section_software
     .section
       &__icon
