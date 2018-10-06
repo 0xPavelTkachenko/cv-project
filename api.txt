@@ -1,7 +1,5 @@
 circle: {
   classname,
-  outer: {width, height},
-  inner: {width, height},
   img: {src, x, y, size}
 }
 

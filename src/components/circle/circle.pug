@@ -1,27 +1,7 @@
 mixin circle(options)
   -
     options = options ? options : {};
-    options.outer = options.outer ? options.outer : {};
-    options.inner = options.inner ? options.inner : {};
     options.img = options.img ? options.img : {};
-
-    let outerStyle = '';
-    if (options.outer.width) {
-      outerStyle += 'width: ' + options.outer.width + ';';
-    }
-
-    if (options.outer.height) {
-      outerStyle += 'height: ' + options.outer.height + ';';
-    }
-
-    let innerStyle = '';
-    if (options.inner.width) {
-      innerStyle += 'width: ' + options.inner.width + ';';
-    }
-
-    if (options.inner.height) {
-      innerStyle += 'height: ' + options.inner.height + ';';
-    }
 
     let imgStyle = '';
     if (options.img.src) {
@@ -40,5 +20,5 @@ mixin circle(options)
       }
     }
 
-  .circle(class=options.classname, style=outerStyle)
-    .circle__inner(style=innerStyle+imgStyle)
+  .circle(class=options.classname)
+    .circle__inner(style=imgStyle)
