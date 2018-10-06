@@ -35,8 +35,27 @@ $content-padding-top = 60px
     &__title
       color #006cb4
 
+// 40%
+@media only screen and (max-width: 992px)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * $k40
+        margin-right $icon-margin-right * $k40
+
+      &__title
+        margin-bottom $title-margin-bottom * $k40
+        margin-right $title-margin-right * $k40
+
+      &__line
+        margin-bottom $line-margin-bottom * $k40
+
+      &__content
+        padding-left $content-padding-left * $k40
+        padding-top $content-padding-top * $k40
+
 // 50%
-@media only screen and (max-width: 1440px)
+@media only screen and (min-width: 992px) and (max-width: 1440px)
   .section_education
     .section
       &__icon
