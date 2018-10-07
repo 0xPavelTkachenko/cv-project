@@ -6,9 +6,10 @@ $k60 = 0.6
 $k70 = 0.7
 $k80 = 0.8
 
-$item-margin-bottom = 34px
-$item-before-left = -95px
-$item-before-top = -24px
+$li-margin-bottom = 34px
+
+$mark-left = -81px
+$mark-top = 2px
 
 $period-subtitle-margin-top = 31px
 $period-subtitle-margin-left = -2px
@@ -19,20 +20,24 @@ $period-content-margin-left = 3px
   margin 0
   padding 0
 
-  &__item
+  &__li
     position relative
 
     list-style-type none
 
     margin-bottom $item-margin-bottom
 
-  &__item::before
-    content '\b7'
-    font-size 27.08rem
-    float left
+  &__mark
     position absolute
-    left $item-before-left
-    top $item-before-top
+    left $mark-left
+    top $mark-top
+
+    width 3.333333333rem
+    height 3.333333333rem
+
+    background-color black
+
+    border-radius 100%
 
   .period
     &__subtitle
@@ -46,12 +51,12 @@ $period-content-margin-left = 3px
 // 40%
 @media only screen and (max-width: 992px)
   .period-list
-    &__item
-      margin-bottom $item-margin-bottom * $k40
+    &__li
+      margin-bottom $li-margin-bottom * $k40
 
-    &__item::before
-      left $item-before-left * $k40
-      top $item-before-top * $k40
+    &__mark
+      left $mark-left * $k40
+      top $mark-top * $k40
 
     .period
       &__subtitle
@@ -65,12 +70,12 @@ $period-content-margin-left = 3px
 // 50%
 @media only screen and (min-width: 992px) and (max-width: 1440px)
   .period-list
-    &__item
-      margin-bottom $item-margin-bottom * $k50
+    &__li
+      margin-bottom $li-margin-bottom * $k50
 
-    &__item::before
-      left $item-before-left * $k50
-      top $item-before-top * $k50
+    &__mark
+      left $mark-left * $k50
+      top $mark-top * $k50
 
     .period
       &__subtitle
@@ -84,12 +89,12 @@ $period-content-margin-left = 3px
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
   .period-list
-    &__item
-      margin-bottom $item-margin-bottom * $k60
+    &__li
+      margin-bottom $li-margin-bottom * $k60
 
-    &__item::before
-      left $item-before-left * $k60
-      top $item-before-top * $k60
+    &__mark
+      left $mark-left * $k60
+      top $mark-top * $k60
 
     .period
       &__subtitle
@@ -103,12 +108,12 @@ $period-content-margin-left = 3px
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
   .period-list
-    &__item
-      margin-bottom $item-margin-bottom * $k70
+    &__li
+      margin-bottom $li-margin-bottom * $k70
 
-    &__item::before
-      left $item-before-left * $k70
-      top $item-before-top * $k70
+    &__mark
+      left $mark-left * $k70
+      top $mark-top * $k70
 
     .period
       &__subtitle
@@ -122,12 +127,12 @@ $period-content-margin-left = 3px
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
   .period-list
-    &__item
-      margin-bottom $item-margin-bottom * $k80
+    &__li
+      margin-bottom $li-margin-bottom * $k80
 
-    &__item::before
-      left $item-before-left * $k80
-      top $item-before-top * $k80
+    &__mark
+      left $mark-left * $k80
+      top $mark-top * $k80
 
     .period
       &__subtitle
