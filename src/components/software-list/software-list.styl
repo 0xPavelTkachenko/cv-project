@@ -13,7 +13,6 @@ $item-margin-bottom = 50px
 
 .software-list
   display flex
-
   justify-content space-between
 
   padding-left $padding-left
@@ -69,3 +68,11 @@ $item-margin-bottom = 50px
 
     &__item
       margin-bottom $item-margin-bottom * $k80
+
+// <= 480px
+@media only screen and (max-width: 480px)
+  .software-list
+    flex-direction column
+
+    &__col-1, &__col-2
+      width 100%

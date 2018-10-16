@@ -18,7 +18,7 @@ $font-size = 12px
 $body-padding-top = 152px
 
 $main-wrapper-width = 90.8%
-$main-wrapper-min-width = 480px
+$main-wrapper-min-width = 320px
 
 $col-1-width = 36.8%
 $col-1-padding-top = 24px
@@ -81,6 +81,9 @@ body
 @media only screen and (max-width: 960px)
   html
     font-size $font-size * $k40
+
+  body
+    padding-top 0
 
   .main-wrapper
     flex-direction column

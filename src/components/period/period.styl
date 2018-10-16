@@ -120,3 +120,16 @@ $content-margin-top = 12px
       line-height $content-line-height * $k80
       word-spacing $content-word-spacing * $k80
       margin-top $content-margin-top * $k80
+
+// <= 480px
+@media only screen and (max-width: 480px)
+  .period
+    &__title
+      float none
+      margin-bottom 12.4px
+
+    &__timeline
+      margin-left 0
+
+    &__timeline::before
+      content ''
