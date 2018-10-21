@@ -17,6 +17,10 @@ section: {
   icon
 }
 
+profile-section: {
+  classname
+}
+
 contact: {
   classname,
   title,
