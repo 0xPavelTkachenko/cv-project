@@ -1,7 +1,7 @@
 mixin circle(options)
   -
-    options = options ? options : {};
-    options.img = options.img ? options.img : {};
+    options = options || {};
+    options.img = options.img || {};
 
     let imgStyle = '';
     if (options.img.src) {

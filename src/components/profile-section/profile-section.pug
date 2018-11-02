@@ -2,8 +2,8 @@ include ../section/section.pug
 
 mixin profile-section
   -
-    options = options ? options : {};
-    options.classname = options.classname ? options.classname : '';
+    options = options || {};
+    options.classname = options.classname || '';
 
   +section({classname: 'section_profile ' + options.classname, title: 'Profile', icon: './img/profile-icon.png'})
     block

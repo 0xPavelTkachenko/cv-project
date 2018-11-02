@@ -2,8 +2,8 @@ include ../period/period.pug
 
 mixin period-list(options)
   -
-    options = options ? options : {};
-    options.periods = options.periods ? options.periods : [];
+    options = options || {};
+    options.periods = options.periods || [];
 
   ul.period-list(class=options.classname)
     each p in options.periods

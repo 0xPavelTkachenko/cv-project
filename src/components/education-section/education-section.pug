@@ -3,9 +3,9 @@ include ../period-list/period-list.pug
 
 mixin education-section(options)
   -
-    options = options ? options : {};
-    options.classname = options.classname ? options.classname : '';
-    options.education = options.education ? options.education : [];
+    options = options || {};
+    options.classname = options.classname || '';
+    options.education = options.education || [];
 
   +section({classname: 'section_education ' + options.classname, title: 'Education', icon: './img/education-icon.png'})
     +period-list({periods: options.education})

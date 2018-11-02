@@ -1,7 +1,7 @@
 mixin progress-bar(options)
   -
-    options = options ? options : {};
-    options.progress = options.progress ? options.progress : 0;
+    options = options || {};
+    options.progress = options.progress || 0;
 
     if (options.progress < 0) {
       options.progress = 0;

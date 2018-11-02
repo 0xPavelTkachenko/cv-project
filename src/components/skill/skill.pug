@@ -1,7 +1,7 @@
 mixin skill(options)
   -
-    options = options ? options : {};
-    options.power = options.power ? options.power : 0;
+    options = options || {};
+    options.power = options.power || 0;
 
     if (options.power < 0) {
       options.power = 0;
