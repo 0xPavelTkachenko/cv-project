@@ -12,6 +12,25 @@ $line-margin-bottom = 4px
 
 $contact-list-margin-top = -3px
 
+scale(k)
+  .section_contact
+    .section
+      &__icon
+        width $icon-size * k
+        height $icon-size * k
+        margin-right $icon-margin-right * k
+
+      &__title
+        margin-right $title-margin-right * k
+        margin-bottom $title-margin-bottom * k
+
+      &__line
+        margin-right $line-margin-right * k
+        margin-bottom $line-margin-bottom * k
+
+    .contact-list
+      margin-top $contact-list-margin-top * k
+
 .section_contact
   .section
     &__icon
@@ -33,100 +52,20 @@ $contact-list-margin-top = -3px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .section_contact
-    .section
-      &__icon
-        width $icon-size * $k40
-        height $icon-size * $k40
-        margin-right $icon-margin-right * $k40
-
-      &__title
-        margin-right $title-margin-right * $k40
-        margin-bottom $title-margin-bottom * $k40
-
-      &__line
-        margin-right $line-margin-right * $k40
-        margin-bottom $line-margin-bottom * $k40
-
-    .contact-list
-      margin-top $contact-list-margin-top * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .section_contact
-    .section
-      &__icon
-        width $icon-size * $k50
-        height $icon-size * $k50
-        margin-right $icon-margin-right * $k50
-
-      &__title
-        margin-right $title-margin-right * $k50
-        margin-bottom $title-margin-bottom * $k50
-
-      &__line
-        margin-right $line-margin-right * $k50
-        margin-bottom $line-margin-bottom * $k50
-
-    .contact-list
-      margin-top $contact-list-margin-top * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .section_contact
-    .section
-      &__icon
-        width $icon-size * $k60
-        height $icon-size * $k60
-        margin-right $icon-margin-right * $k60
-
-      &__title
-        margin-right $title-margin-right * $k60
-        margin-bottom $title-margin-bottom * $k60
-
-      &__line
-        margin-right $line-margin-right * $k60
-        margin-bottom $line-margin-bottom * $k60
-
-    .contact-list
-      margin-top $contact-list-margin-top * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .section_contact
-    .section
-      &__icon
-        width $icon-size * $k70
-        height $icon-size * $k70
-        margin-right $icon-margin-right * $k70
-
-      &__title
-        margin-right $title-margin-right * $k70
-        margin-bottom $title-margin-bottom * $k70
-
-      &__line
-        margin-right $line-margin-right * $k70
-        margin-bottom $line-margin-bottom * $k70
-
-    .contact-list
-      margin-top $contact-list-margin-top * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .section_contact
-    .section
-      &__icon
-        width $icon-size * $k80
-        height $icon-size * $k80
-        margin-right $icon-margin-right * $k80
-
-      &__title
-        margin-right $title-margin-right * $k80
-        margin-bottom $title-margin-bottom * $k80
-
-      &__line
-        margin-right $line-margin-right * $k80
-        margin-bottom $line-margin-bottom * $k80
-
-    .contact-list
-      margin-top $contact-list-margin-top * $k80
+  scale(0.8)

@@ -1,10 +1,9 @@
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $title-letter-spacing = 1px
+
+scale(k)
+  .contact
+    &__title
+      letter-spacing $title-letter-spacing * k
 
 .contact
   &__title
@@ -22,30 +21,20 @@ $title-letter-spacing = 1px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .contact
-    &__title
-      letter-spacing $title-letter-spacing * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .contact
-    &__title
-      letter-spacing $title-letter-spacing * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .contact
-    &__title
-      letter-spacing $title-letter-spacing * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .contact
-    &__title
-      letter-spacing $title-letter-spacing * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .contact
-    &__title
-      letter-spacing $title-letter-spacing * $k80
+  scale(0.8)

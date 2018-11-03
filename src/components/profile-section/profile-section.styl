@@ -3,6 +3,12 @@
 $content-padding-top = 21px
 $content-padding-left = 1px
 
+scale(k)
+  .section_profile
+    .section__content
+      padding-top $content-padding-top * k
+      padding-left $content-padding-left * k
+
 .section_profile
   .section__content
     padding-top $content-padding-top
@@ -10,35 +16,20 @@ $content-padding-left = 1px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .section_profile
-    .section__content
-      padding-top $content-padding-top * $k40
-      padding-left $content-padding-left * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .section_profile
-    .section__content
-      padding-top $content-padding-top * $k50
-      padding-left $content-padding-left * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .section_profile
-    .section__content
-      padding-top $content-padding-top * $k60
-      padding-left $content-padding-left * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .section_profile
-    .section__content
-      padding-top $content-padding-top * $k70
-      padding-left $content-padding-left * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .section_profile
-    .section__content
-      padding-top $content-padding-top * $k80
-      padding-left $content-padding-left * $k80
+  scale(0.8)

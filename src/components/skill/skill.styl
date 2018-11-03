@@ -1,14 +1,19 @@
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $mark-size = 35px
 $mark-margin-right = 20px
 
 $powerbar-margin-left = 5px
 $powerbar-margin-top = 30px
+
+scale(k)
+  .skill
+    &__mark
+      width $mark-size * k
+      height $mark-size * k
+      margin-right $mark-margin-right * k
+
+    &__powerbar
+      margin-left $powerbar-margin-left * k
+      margin-top $powerbar-margin-top * k
 
 .skill
   &__title
@@ -41,60 +46,20 @@ $powerbar-margin-top = 30px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .skill
-    &__mark
-      width $mark-size * $k40
-      height $mark-size * $k40
-      margin-right $mark-margin-right * $k40
-
-    &__powerbar
-      margin-left $powerbar-margin-left * $k40
-      margin-top $powerbar-margin-top * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .skill
-    &__mark
-      width $mark-size * $k50
-      height $mark-size * $k50
-      margin-right $mark-margin-right * $k50
-
-    &__powerbar
-      margin-left $powerbar-margin-left * $k50
-      margin-top $powerbar-margin-top * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .skill
-    &__mark
-      width $mark-size * $k60
-      height $mark-size * $k60
-      margin-right $mark-margin-right * $k60
-
-    &__powerbar
-      margin-left $powerbar-margin-left * $k60
-      margin-top $powerbar-margin-top * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .skill
-    &__mark
-      width $mark-size * $k70
-      height $mark-size * $k70
-      margin-right $mark-margin-right * $k70
-
-    &__powerbar
-      margin-left $powerbar-margin-left * $k70
-      margin-top $powerbar-margin-top * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .skill
-    &__mark
-      width $mark-size * $k80
-      height $mark-size * $k80
-      margin-right $mark-margin-right * $k80
-
-    &__powerbar
-      margin-left $powerbar-margin-left * $k80
-      margin-top $powerbar-margin-top * $k80
+  scale(0.8)

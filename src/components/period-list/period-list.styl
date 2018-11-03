@@ -1,11 +1,5 @@
 @require '../period/period.styl'
 
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $li-margin-bottom = 34px
 
 $mark-left = -81px
@@ -15,6 +9,21 @@ $period-subtitle-margin-top = 31px
 $period-subtitle-margin-left = -2px
 $period-content-margin-top = 24px
 $period-content-margin-left = 3px
+
+scale(k)
+  .period-list
+    &__mark
+      left $mark-left * k
+      top $mark-top * k
+
+    .period
+      &__subtitle
+        margin-top $period-subtitle-margin-top * k
+        margin-left $period-subtitle-margin-left * k
+
+      &__content
+        margin-top $period-content-margin-top * k
+        margin-left $period-content-margin-left * k
 
 .period-list
   margin 0
@@ -50,95 +59,35 @@ $period-content-margin-left = 3px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .period-list
-    &__li
-      margin-bottom 15.5px
+  scale(0.4)
 
-    &__mark
-      left $mark-left * $k40
-      top $mark-top * $k40
-
-    .period
-      &__subtitle
-        margin-top $period-subtitle-margin-top * $k40
-        margin-left $period-subtitle-margin-left * $k40
-
-      &__content
-        margin-top $period-content-margin-top * $k40
-        margin-left $period-content-margin-left * $k40
+  .period-list__li
+    margin-bottom 15.5px
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .period-list
-    &__li
-      margin-bottom $li-margin-bottom * $k50
+  scale(0.5)
 
-    &__mark
-      left $mark-left * $k50
-      top $mark-top * $k50
-
-    .period
-      &__subtitle
-        margin-top $period-subtitle-margin-top * $k50
-        margin-left $period-subtitle-margin-left * $k50
-
-      &__content
-        margin-top $period-content-margin-top * $k50
-        margin-left $period-content-margin-left * $k50
+  .period-list__li
+    margin-bottom $li-margin-bottom * 0.5
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .period-list
-    &__li
-      margin-bottom 23.8px
+  scale(0.6)
 
-    &__mark
-      left $mark-left * $k60
-      top $mark-top * $k60
-
-    .period
-      &__subtitle
-        margin-top $period-subtitle-margin-top * $k60
-        margin-left $period-subtitle-margin-left * $k60
-
-      &__content
-        margin-top $period-content-margin-top * $k60
-        margin-left $period-content-margin-left * $k60
+  .period-list__li
+    margin-bottom 23.8px
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .period-list
-    &__li
-      margin-bottom 25px
+  scale(0.7)
 
-    &__mark
-      left $mark-left * $k70
-      top $mark-top * $k70
-
-    .period
-      &__subtitle
-        margin-top $period-subtitle-margin-top * $k70
-        margin-left $period-subtitle-margin-left * $k70
-
-      &__content
-        margin-top $period-content-margin-top * $k70
-        margin-left $period-content-margin-left * $k70
+  .period-list__li
+    margin-bottom 25px
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .period-list
-    &__li
-      margin-bottom 26.4px
+  scale(0.8)
 
-    &__mark
-      left $mark-left * $k80
-      top $mark-top * $k80
-
-    .period
-      &__subtitle
-        margin-top $period-subtitle-margin-top * $k80
-        margin-left $period-subtitle-margin-left * $k80
-
-      &__content
-        margin-top $period-content-margin-top * $k80
-        margin-left $period-content-margin-left * $k80
+  .period-list__li
+    margin-bottom 26.4px

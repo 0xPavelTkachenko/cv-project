@@ -1,15 +1,17 @@
 @require '../progress-bar/progress-bar.styl'
 
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $padding-left = 15px
 $padding-right = 5px
 
 $item-margin-bottom = 50px
+
+scale(k)
+  .software-list
+    padding-left $padding-left * k
+    padding-right $padding-right * k
+
+    &__item
+      margin-bottom $item-margin-bottom * k
 
 .software-list
   display flex
@@ -26,48 +28,23 @@ $item-margin-bottom = 50px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .software-list
-    padding-left $padding-left * $k40
-    padding-right $padding-right * $k40
-
-    &__item
-      margin-bottom $item-margin-bottom * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .software-list
-    padding-left $padding-left * $k50
-    padding-right $padding-right * $k50
-
-    &__item
-      margin-bottom $item-margin-bottom * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .software-list
-    padding-left $padding-left * $k60
-    padding-right $padding-right * $k60
-
-    &__item
-      margin-bottom $item-margin-bottom * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .software-list
-    padding-left $padding-left * $k70
-    padding-right $padding-right * $k70
-
-    &__item
-      margin-bottom $item-margin-bottom * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .software-list
-    padding-left $padding-left * $k80
-    padding-right $padding-right * $k80
-
-    &__item
-      margin-bottom $item-margin-bottom * $k80
+  scale(0.8)
 
 // <= 480px
 @media only screen and (max-width: 480px)

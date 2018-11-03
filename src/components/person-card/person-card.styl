@@ -1,11 +1,5 @@
 @require '../circle/circle.styl'
 
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $padding-left = 32px
 
 $name-margin-top = 45px
@@ -16,6 +10,22 @@ $surname-letter-spacing = 1px
 
 $job-margin-left = 2px
 $job-letter-spacing = -1px
+
+scale(k)
+  .person-card
+    padding-left $padding-left * k
+
+    &__name
+      margin-top $name-margin-top * k
+      word-spacing $name-word-spacing * k
+
+    &__surname
+      margin-top $surname-margin-top * k
+      letter-spacing $surname-letter-spacing * k
+
+    &__job
+      margin-left $job-margin-left * k
+      letter-spacing $job-letter-spacing * k
 
 .person-card
   padding-left $padding-left
@@ -51,85 +61,20 @@ $job-letter-spacing = -1px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .person-card
-    padding-left $padding-left * $k40
-
-    &__name
-      margin-top $name-margin-top * $k40
-      word-spacing $name-word-spacing * $k40
-
-    &__surname
-      margin-top $surname-margin-top * $k40
-      letter-spacing $surname-letter-spacing * $k40
-
-    &__job
-      margin-left $job-margin-left * $k40
-      letter-spacing $job-letter-spacing * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .person-card
-    padding-left $padding-left * $k50
-
-    &__name
-      margin-top $name-margin-top * $k50
-      word-spacing $name-word-spacing * $k50
-
-    &__surname
-      margin-top $surname-margin-top * $k50
-      letter-spacing $surname-letter-spacing * $k50
-
-    &__job
-      margin-left $job-margin-left * $k50
-      letter-spacing $job-letter-spacing * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .person-card
-    padding-left $padding-left * $k60
-
-    &__name
-      margin-top $name-margin-top * $k60
-      word-spacing $name-word-spacing * $k60
-
-    &__surname
-      margin-top $surname-margin-top * $k60
-      letter-spacing $surname-letter-spacing * $k60
-
-    &__job
-      margin-left $job-margin-left * $k60
-      letter-spacing $job-letter-spacing * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .person-card
-    padding-left $padding-left * $k70
-
-    &__name
-      margin-top $name-margin-top * $k70
-      word-spacing $name-word-spacing * $k70
-
-    &__surname
-      margin-top $surname-margin-top * $k70
-      letter-spacing $surname-letter-spacing * $k70
-
-    &__job
-      margin-left $job-margin-left * $k70
-      letter-spacing $job-letter-spacing * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .person-card
-    padding-left $padding-left * $k80
-
-    &__name
-      margin-top $name-margin-top * $k80
-      word-spacing $name-word-spacing * $k80
-
-    &__surname
-      margin-top $surname-margin-top * $k80
-      letter-spacing $surname-letter-spacing * $k80
-
-    &__job
-      margin-left $job-margin-left * $k80
-      letter-spacing $job-letter-spacing * $k80
+  scale(0.8)

@@ -1,9 +1,3 @@
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $icon-size = 148px
 $icon-margin-right = 19px
 
@@ -16,6 +10,29 @@ $line-margin-bottom = 4px
 
 $content-line-height = 37px
 $content-word-spacing = -0.5px
+
+scale(k)
+  .section
+    &__icon
+      width $icon-size * k
+      height $icon-size * k
+      margin-right $icon-margin-right * k
+
+    &__line
+      height $line-size * k
+
+    &__title
+      margin-right $title-margin-right * k
+      margin-bottom $title-margin-bottom * k
+      letter-spacing $title-letter-spacing * k
+
+    &__line
+      height $line-size * k
+      margin-bottom $line-margin-bottom * k
+
+    &__content
+      line-height $content-line-height * k
+      word-spacing $content-word-spacing * k
 
 .section
   &__header
@@ -65,120 +82,20 @@ $content-word-spacing = -0.5px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .section
-    &__icon
-      width $icon-size * $k40
-      height $icon-size * $k40
-      margin-right $icon-margin-right * $k40
-
-    &__line
-      height $line-size * $k40
-
-    &__title
-      margin-right $title-margin-right * $k40
-      margin-bottom $title-margin-bottom * $k40
-      letter-spacing $title-letter-spacing * $k40
-
-    &__line
-      height $line-size * $k40
-      margin-bottom $line-margin-bottom * $k40
-
-    &__content
-      line-height $content-line-height * $k40
-      word-spacing $content-word-spacing * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .section
-    &__icon
-      width $icon-size * $k50
-      height $icon-size * $k50
-      margin-right $icon-margin-right * $k50
-
-    &__line
-      height $line-size * $k50
-
-    &__title
-      margin-right $title-margin-right * $k50
-      margin-bottom $title-margin-bottom * $k50
-      letter-spacing $title-letter-spacing * $k50
-
-    &__line
-      height $line-size * $k50
-      margin-bottom $line-margin-bottom * $k50
-
-    &__content
-      line-height $content-line-height * $k50
-      word-spacing $content-word-spacing * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .section
-    &__icon
-      width $icon-size * $k60
-      height $icon-size * $k60
-      margin-right $icon-margin-right * $k60
-
-    &__line
-      height $line-size * $k60
-
-    &__title
-      margin-right $title-margin-right * $k60
-      margin-bottom $title-margin-bottom * $k60
-      letter-spacing $title-letter-spacing * $k60
-
-    &__line
-      height $line-size * $k60
-      margin-bottom $line-margin-bottom * $k60
-
-    &__content
-      line-height $content-line-height * $k60
-      word-spacing $content-word-spacing * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .section
-    &__icon
-      width $icon-size * $k70
-      height $icon-size * $k70
-      margin-right $icon-margin-right * $k70
-
-    &__line
-      height $line-size * $k70
-
-    &__title
-      margin-right $title-margin-right * $k70
-      margin-bottom $title-margin-bottom * $k70
-      letter-spacing $title-letter-spacing * $k70
-
-    &__line
-      height $line-size * $k70
-      margin-bottom $line-margin-bottom * $k70
-
-    &__content
-      line-height $content-line-height * $k70
-      word-spacing $content-word-spacing * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .section
-    &__icon
-      width $icon-size * $k80
-      height $icon-size * $k80
-      margin-right $icon-margin-right * $k80
-
-    &__line
-      height $line-size * $k80
-
-    &__title
-      margin-right $title-margin-right * $k80
-      margin-bottom $title-margin-bottom * $k80
-      letter-spacing $title-letter-spacing * $k80
-
-    &__line
-      height $line-size * $k80
-      margin-bottom $line-margin-bottom * $k80
-
-    &__content
-      line-height $content-line-height * $k80
-      word-spacing $content-word-spacing * $k80
+  scale(0.8)

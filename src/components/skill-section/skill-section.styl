@@ -15,6 +15,29 @@ $content-padding-left = 5px
 
 $skill-margin-bottom = 50px
 
+scale(k)
+  .section_skill
+    .section
+      &__icon
+        width $icon-size * k
+        height $icon-size * k
+
+      &__title
+        margin-right $title-margin-right * k
+        margin-bottom $title-margin-bottom * k
+
+      &__line
+        margin-right $line-margin-right * k
+        margin-left $line-margin-left * k
+        margin-bottom $line-margin-bottom * k
+
+      &__content
+        padding-top $content-padding-top * k
+        padding-left $content-padding-left * k
+
+    .skill
+      margin-bottom $skill-margin-bottom * k
+
 .section_skill
   .section
     &__icon
@@ -39,120 +62,20 @@ $skill-margin-bottom = 50px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .section_skill
-    .section
-      &__icon
-        width $icon-size * $k40
-        height $icon-size * $k40
-
-      &__title
-        margin-right $title-margin-right * $k40
-        margin-bottom $title-margin-bottom * $k40
-
-      &__line
-        margin-right $line-margin-right * $k40
-        margin-left $line-margin-left * $k40
-        margin-bottom $line-margin-bottom * $k40
-
-      &__content
-        padding-top $content-padding-top * $k40
-        padding-left $content-padding-left * $k40
-
-    .skill
-      margin-bottom $skill-margin-bottom * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .section_skill
-    .section
-      &__icon
-        width $icon-size * $k50
-        height $icon-size * $k50
-
-      &__title
-        margin-right $title-margin-right * $k50
-        margin-bottom $title-margin-bottom * $k50
-
-      &__line
-        margin-right $line-margin-right * $k50
-        margin-left $line-margin-left * $k50
-        margin-bottom $line-margin-bottom * $k50
-
-      &__content
-        padding-top $content-padding-top * $k50
-        padding-left $content-padding-left * $k50
-
-    .skill
-      margin-bottom $skill-margin-bottom * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .section_skill
-    .section
-      &__icon
-        width $icon-size * $k60
-        height $icon-size * $k60
-
-      &__title
-        margin-right $title-margin-right * $k60
-        margin-bottom $title-margin-bottom * $k60
-
-      &__line
-        margin-right $line-margin-right * $k60
-        margin-left $line-margin-left * $k60
-        margin-bottom $line-margin-bottom * $k60
-
-      &__content
-        padding-top $content-padding-top * $k60
-        padding-left $content-padding-left * $k60
-
-    .skill
-      margin-bottom $skill-margin-bottom * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .section_skill
-    .section
-      &__icon
-        width $icon-size * $k70
-        height $icon-size * $k70
-
-      &__title
-        margin-right $title-margin-right * $k70
-        margin-bottom $title-margin-bottom * $k70
-
-      &__line
-        margin-right $line-margin-right * $k70
-        margin-left $line-margin-left * $k70
-        margin-bottom $line-margin-bottom * $k70
-
-      &__content
-        padding-top $content-padding-top * $k70
-        padding-left $content-padding-left * $k70
-
-    .skill
-      margin-bottom $skill-margin-bottom * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .section_skill
-    .section
-      &__icon
-        width $icon-size * $k80
-        height $icon-size * $k80
-
-      &__title
-        margin-right $title-margin-right * $k80
-        margin-bottom $title-margin-bottom * $k80
-
-      &__line
-        margin-right $line-margin-right * $k80
-        margin-left $line-margin-left * $k80
-        margin-bottom $line-margin-bottom * $k80
-
-      &__content
-        padding-top $content-padding-top * $k80
-        padding-left $content-padding-left * $k80
-
-    .skill
-      margin-bottom $skill-margin-bottom * $k80
+  scale(0.8)

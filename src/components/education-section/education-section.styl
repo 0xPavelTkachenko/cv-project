@@ -12,6 +12,24 @@ $line-margin-bottom = 7px
 $content-padding-left = 105px
 $content-padding-top = 60px
 
+scale(k)
+  .section_education
+    .section
+      &__icon
+        margin-top $icon-margin-top * k
+        margin-right $icon-margin-right * k
+
+      &__title
+        margin-bottom $title-margin-bottom * k
+        margin-right $title-margin-right * k
+
+      &__line
+        margin-bottom $line-margin-bottom * k
+
+      &__content
+        padding-left $content-padding-left * k
+        padding-top $content-padding-top * k
+
 .section_education
   .section
     &__icon
@@ -37,95 +55,20 @@ $content-padding-top = 60px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * $k40
-        margin-right $icon-margin-right * $k40
-
-      &__title
-        margin-bottom $title-margin-bottom * $k40
-        margin-right $title-margin-right * $k40
-
-      &__line
-        margin-bottom $line-margin-bottom * $k40
-
-      &__content
-        padding-left $content-padding-left * $k40
-        padding-top $content-padding-top * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * $k50
-        margin-right $icon-margin-right * $k50
-
-      &__title
-        margin-bottom $title-margin-bottom * $k50
-        margin-right $title-margin-right * $k50
-
-      &__line
-        margin-bottom $line-margin-bottom * $k50
-
-      &__content
-        padding-left $content-padding-left * $k50
-        padding-top $content-padding-top * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * $k60
-        margin-right $icon-margin-right * $k60
-
-      &__title
-        margin-bottom $title-margin-bottom * $k60
-        margin-right $title-margin-right * $k60
-
-      &__line
-        margin-bottom $line-margin-bottom * $k60
-
-      &__content
-        padding-left $content-padding-left * $k60
-        padding-top $content-padding-top * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * $k70
-        margin-right $icon-margin-right * $k70
-
-      &__title
-        margin-bottom $title-margin-bottom * $k70
-        margin-right $title-margin-right * $k70
-
-      &__line
-        margin-bottom $line-margin-bottom * $k70
-
-      &__content
-        padding-left $content-padding-left * $k70
-        padding-top $content-padding-top * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * $k80
-        margin-right $icon-margin-right * $k80
-
-      &__title
-        margin-bottom $title-margin-bottom * $k80
-        margin-right $title-margin-right * $k80
-
-      &__line
-        margin-bottom $line-margin-bottom * $k80
-
-      &__content
-        padding-left $content-padding-left * $k80
-        padding-top $content-padding-top * $k80
+  scale(0.8)

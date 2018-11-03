@@ -1,11 +1,14 @@
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
 $circle-size = 462px
 $circle-size-inner = 405px
+
+scale(k)
+  .circle
+    width $circle-size * k
+    height $circle-size * k
+
+    &__inner
+      width $circle-size-inner * k
+      height $circle-size-inner * k
 
 .circle
   width $circle-size
@@ -35,50 +38,20 @@ $circle-size-inner = 405px
 
 // 40%
 @media only screen and (max-width: 1024px)
-  .circle
-    width $circle-size * $k40
-    height $circle-size * $k40
-
-    &__inner
-      width $circle-size-inner * $k40
-      height $circle-size-inner * $k40
+  scale(0.4)
 
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
-  .circle
-    width $circle-size * $k50
-    height $circle-size * $k50
-
-    &__inner
-      width $circle-size-inner * $k50
-      height $circle-size-inner * $k50
+  scale(0.5)
 
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
-  .circle
-    width $circle-size * $k60
-    height $circle-size * $k60
-
-    &__inner
-      width $circle-size-inner * $k60
-      height $circle-size-inner * $k60
+  scale(0.6)
 
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
-  .circle
-    width $circle-size * $k70
-    height $circle-size * $k70
-
-    &__inner
-      width $circle-size-inner * $k70
-      height $circle-size-inner * $k70
+  scale(0.7)
 
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
-  .circle
-    width $circle-size * $k80
-    height $circle-size * $k80
-
-    &__inner
-      width $circle-size-inner * $k80
-      height $circle-size-inner * $k80
+  scale(0.8)
