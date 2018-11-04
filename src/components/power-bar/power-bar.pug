@@ -1,4 +1,4 @@
-mixin skill(options)
+mixin power-bar(options)
   -
     options = options || {};
     options.power = options.power || 0;
@@ -9,10 +9,10 @@ mixin skill(options)
       options.power = 12;
     }
 
-  .skill(class=options.classname)
-    .skill__title=options.title
-    .skill__powerbar
+  .power-bar(class=options.classname)
+    .power-bar__title=options.title
+    .power-bar__powerbar
       - for (let i = 0; i < options.power; i++)
-          .skill__mark.skill__mark_enabled
+          .power-bar__mark.power-bar__mark_enabled
       - for (let i = options.power; i < 12; i++)
-          .skill__mark.skill__mark_disabled
+          .power-bar__mark.power-bar__mark_disabled

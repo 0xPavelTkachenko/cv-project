@@ -37,7 +37,7 @@ contact-section {
   contacts: [{title, content}]
 }
 
-skill: {
+power-bar: {
   classname,
   title,
   power

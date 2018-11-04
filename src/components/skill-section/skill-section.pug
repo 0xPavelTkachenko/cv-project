@@ -1,5 +1,5 @@
 include ../section/section.pug
-include ../skill/skill.pug
+include ../power-bar/power-bar.pug
 
 mixin skill-section(options)
   -
@@ -9,4 +9,4 @@ mixin skill-section(options)
 
   +section({classname: 'section_skill ' + options.classname, title: 'Skills', icon: './img/skill-icon.png'})
     each s in options.skills
-      +skill({title: s.title, power: s.power})
+      +power-bar({title: s.title, power: s.power})
