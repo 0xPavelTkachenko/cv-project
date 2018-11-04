@@ -11,8 +11,8 @@ mixin power-bar(options)
 
   .power-bar(class=options.classname)
     .power-bar__title=options.title
-    .power-bar__powerbar
+    .power-bar__buffer
       - for (let i = 0; i < options.power; i++)
           .power-bar__mark.power-bar__mark_enabled
       - for (let i = options.power; i < 12; i++)
-          .power-bar__mark.power-bar__mark_disabled
+          .power-bar__mark
