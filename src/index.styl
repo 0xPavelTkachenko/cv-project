@@ -13,7 +13,10 @@ $k60 = 0.6
 $k70 = 0.7
 $k80 = 0.8
 
-$font-size = 12px
+$html-color = #000
+$html-background-color = #fff
+$html-font-size = 12px
+$html-font-family = "Myriad Pro", Arial, sans-serif
 
 $body-padding-top = 152px
 
@@ -33,7 +36,10 @@ $section-education-margin-bottom = 101px
 $section-exp-margin-bottom = 102px
 
 html
-  font-size $font-size
+  color $html-color
+  background-color $html-background-color
+  font-size $html-font-size
+  font-family $html-font-family
 
 body
   margin 0
@@ -44,7 +50,6 @@ body
   width $main-wrapper-width
   min-width $main-wrapper-min-width
   margin 0 auto
-  font-family 'Myriad Pro'
   display flex
   justify-content space-between
 
@@ -74,7 +79,7 @@ body
 // <= 960px
 @media only screen and (max-width: 960px)
   html
-    font-size $font-size * $k40
+    font-size $html-font-size * $k40
 
   body
     padding-top 0
@@ -100,7 +105,7 @@ body
 // 40%
 @media only screen and (min-width: 960px) and (max-width: 1024px)
   html
-    font-size $font-size * $k40
+    font-size $html-font-size * $k40
 
   body
     padding-top $body-padding-top * $k40
@@ -134,7 +139,7 @@ body
 // 50%
 @media only screen and (min-width: 1024px) and (max-width: 1440px)
   html
-    font-size $font-size * $k50
+    font-size $html-font-size * $k50
 
   body
     padding-top $body-padding-top * $k50
@@ -163,7 +168,7 @@ body
 // 60%
 @media only screen and (min-width: 1440px) and (max-width: 1680px)
   html
-    font-size $font-size * $k60
+    font-size $html-font-size * $k60
 
   body
     padding-top $body-padding-top * $k60
@@ -192,7 +197,7 @@ body
 // 70%
 @media only screen and (min-width: 1680px) and (max-width: 1920px)
   html
-    font-size $font-size * $k70
+    font-size $html-font-size * $k70
 
   body
     padding-top $body-padding-top * $k70
@@ -221,7 +226,7 @@ body
 // 80%
 @media only screen and (min-width: 1920px) and (max-width: 2048px)
   html
-    font-size $font-size * $k80
+    font-size $html-font-size * $k80
 
   body
     padding-top $body-padding-top * $k80
