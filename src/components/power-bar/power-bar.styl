@@ -24,7 +24,12 @@ scale(k)
     font-size 4.25rem
 
   &__buffer
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
     display flex
+    -webkit-justify-content center
     justify-content center
     margin-left $buffer-margin-left
     margin-top $buffer-margin-top
@@ -34,6 +39,8 @@ scale(k)
     height $mark-size
     background-color $color-gray
     margin-right $mark-margin-right
+    -webkit-border-radius 100%
+    -moz-border-radius 100%
     border-radius 100%
 
     &_enabled

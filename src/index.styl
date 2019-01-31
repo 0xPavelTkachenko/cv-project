@@ -50,7 +50,12 @@ body
   width $main-wrapper-width
   min-width $main-wrapper-min-width
   margin 0 auto
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
   display flex
+  -webkit-justify-content space-between
   justify-content space-between
 
   &__col-1
@@ -85,6 +90,7 @@ body
     padding-top 0
 
   .main-wrapper
+    -webkit-flex-direction column
     flex-direction column
     padding-left 8px
     padding-right 8px
@@ -111,6 +117,7 @@ body
     padding-top $body-padding-top * $k40
 
   .main-wrapper
+    -webkit-flex-direction column
     flex-direction row
 
     &__col-1

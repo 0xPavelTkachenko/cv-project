@@ -38,7 +38,12 @@ scale(k)
 
 .section
   &__header
+    display -webkit-box
+    display -moz-box
+    display -ms-flexbox
+    display -webkit-flex
     display flex
+    -webkit-align-items center
     align-items center
 
   &__icon
@@ -61,6 +66,7 @@ scale(k)
     letter-spacing $title-letter-spacing
 
   &__line
+    -webkit-flex-grow 1
     flex-grow 1
     height $line-size
     background-color $color-blue

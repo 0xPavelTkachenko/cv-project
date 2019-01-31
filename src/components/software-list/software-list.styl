@@ -14,7 +14,12 @@ scale(k)
       margin-bottom $item-margin-bottom * k
 
 .software-list
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
   display flex
+  -webkit-justify-content space-between
   justify-content space-between
   padding-left $padding-left
   padding-right $padding-right
@@ -48,6 +53,7 @@ scale(k)
 // <= 480px
 @media only screen and (max-width: 480px)
   .software-list
+    -webkit-flex-direction column
     flex-direction column
 
     &__col-1, &__col-2
