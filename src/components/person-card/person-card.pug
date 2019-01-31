@@ -5,7 +5,7 @@ mixin person-card(options)
     options = options || {};
 
   section.person-card(class=options.classname)
-    +circle({classname: 'person-card__photo', img: {src: options.photo, x: 'center', y: 'center', size: 'contain'}})
+    +circle({classname: "person-card__photo", img: {src: options.photo, x: "center", y: "center", size: "contain"}})
     .person-card__name=options.name
     .person-card__surname=options.surname
     .person-card__job=options.job

@@ -3,13 +3,13 @@ include ../progress-bar/progress-bar
 mixin software-list(options)
   -
     options = options || {};
-    options.classname = options.classname || '';
+    options.classname = options.classname || "";
     options.software = options.software || [];
 
   .software-list(class=options.classname)
     .software-list__col-1
       - for (let i = 0; i < options.software.length; i += 2)
-        +progress-bar({classname: 'software-list__item', title: options.software[i].title, progress: options.software[i].progress})
+        +progress-bar({classname: "software-list__item", title: options.software[i].title, progress: options.software[i].progress})
     .software-list__col-2
       - for (let i = 1; i < options.software.length; i += 2)
-        +progress-bar({classname: 'software-list__item', title: options.software[i].title, progress: options.software[i].progress})
+        +progress-bar({classname: "software-list__item", title: options.software[i].title, progress: options.software[i].progress})

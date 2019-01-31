@@ -3,20 +3,20 @@ mixin circle(options)
     options = options || {};
     options.img = options.img || {};
 
-    let imgStyle = '';
+    let imgStyle = "";
     if (options.img.src) {
-      imgStyle += 'background-image: url(\'' + options.img.src + '\');';
-      imgStyle += 'background-color: transparent;';
+      imgStyle += "background-image: url(\"" + options.img.src + "\");";
+      imgStyle += "background-color: transparent;";
 
       if (options.img.x || options.img.y) {
         let x, y;
-        x = options.img.x ? options.img.x : '0';
-        y = options.img.y ? options.img.y : '0';
-        imgStyle += 'background-position: ' + x + ' ' + y + ';';
+        x = options.img.x ? options.img.x : "0";
+        y = options.img.y ? options.img.y : "0";
+        imgStyle += "background-position: " + x + " " + y + ";";
       }
 
       if (options.img.size) {
-        imgStyle += 'background-size: ' + options.img.size + ';';
+        imgStyle += "background-size: " + options.img.size + ";";
       }
     }
 

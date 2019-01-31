@@ -9,5 +9,5 @@ mixin period-list(options)
     each p in options.periods
       li.period-list__li
         .period-list__mark
-        +period({classname: 'period-list__item', title: p.title, subtitle: p.subtitle, timeline: p.timeline})
+        +period({classname: "period-list__item", title: p.title, subtitle: p.subtitle, timeline: p.timeline})
           | #{p.content}

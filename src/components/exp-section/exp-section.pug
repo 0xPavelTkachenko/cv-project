@@ -4,8 +4,8 @@ include ../period-list/period-list
 mixin exp-section(options)
   -
     options = options || {};
-    options.classname = options.classname || '';
+    options.classname = options.classname || "";
     options.exp = options.exp || [];
 
-  +section({classname: 'section_exp ' + options.classname, title: 'Experience', icon: './img/exp-icon.png'})
+  +section({classname: "section_exp " + options.classname, title: "Experience", icon: "./img/exp-icon.png"})
     +period-list({periods: options.exp})

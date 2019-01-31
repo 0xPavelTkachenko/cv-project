@@ -4,7 +4,7 @@ include ../software-list/software-list
 mixin software-section(options)
   -
     options = options || {};
-    options.classname = options.classname || '';
+    options.classname = options.classname || "";
 
-  +section({classname: 'section_software ' + options.classname, title: 'Software', icon: './img/software-icon.png'})
+  +section({classname: "section_software " + options.classname, title: "Software", icon: "./img/software-icon.png"})
     +software-list({software: options.software})
