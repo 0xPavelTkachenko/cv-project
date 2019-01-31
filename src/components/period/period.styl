@@ -7,20 +7,6 @@ $content-line-height = 37px
 $content-word-spacing = -0.5px
 $content-margin-top = 12px
 
-scale(k)
-  .period
-    &__timeline
-      margin-left $timeline-margin-left * k
-
-    &__subtitle
-      margin-top $subtitle-margin-top * k
-      margin-left $subtitle-margin-left * k
-
-    &__content
-      line-height $content-line-height * k
-      word-spacing $content-word-spacing * k
-      margin-top $content-margin-top * k
-
 .period
   &__title, &__subtitle, &__timeline
     font-size 4.3rem
@@ -32,16 +18,61 @@ scale(k)
     font-weight bold
     float left
 
+    @media only screen and (max-width: 480px)
+      float none
+      margin-bottom 12.4px
+
   &__timeline
     margin-left $timeline-margin-left
 
+    @media only screen and (max-width: 1024px)
+      margin-left $timeline-margin-left * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-left $timeline-margin-left * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-left $timeline-margin-left * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-left $timeline-margin-left * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-left $timeline-margin-left * 0.8
+
+    @media only screen and (max-width: 480px)
+      margin-left 0
+
   &__timeline::before
     content "// "
+
+    @media only screen and (max-width: 480px)
+      content ""
 
   &__subtitle
     clear both
     margin-top $subtitle-margin-top
     margin-left $subtitle-margin-left
+
+    @media only screen and (max-width: 1024px)
+      margin-top $subtitle-margin-top * 0.4
+      margin-left $subtitle-margin-left * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-top $subtitle-margin-top * 0.5
+      margin-left $subtitle-margin-left * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-top $subtitle-margin-top * 0.6
+      margin-left $subtitle-margin-left * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-top $subtitle-margin-top * 0.7
+      margin-left $subtitle-margin-left * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-top $subtitle-margin-top * 0.8
+      margin-left $subtitle-margin-left * 0.8
 
   &__content
     font-size 2.585rem
@@ -49,35 +80,27 @@ scale(k)
     word-spacing $content-word-spacing
     margin-top $content-margin-top
 
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
+    @media only screen and (max-width: 1024px)
+      line-height $content-line-height * 0.4
+      word-spacing $content-word-spacing * 0.4
+      margin-top $content-margin-top * 0.4
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      line-height $content-line-height * 0.5
+      word-spacing $content-word-spacing * 0.5
+      margin-top $content-margin-top * 0.5
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      line-height $content-line-height * 0.6
+      word-spacing $content-word-spacing * 0.6
+      margin-top $content-margin-top * 0.6
 
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      line-height $content-line-height * 0.7
+      word-spacing $content-word-spacing * 0.7
+      margin-top $content-margin-top * 0.7
 
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)
-
-// <= 480px
-@media only screen and (max-width: 480px)
-  .period
-    &__title
-      float none
-      margin-bottom 12.4px
-
-    &__timeline
-      margin-left 0
-
-    &__timeline::before
-      content ""
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      line-height $content-line-height * 0.8
+      word-spacing $content-word-spacing * 0.8
+      margin-top $content-margin-top * 0.8

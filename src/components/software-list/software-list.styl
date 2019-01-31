@@ -5,14 +5,6 @@ $padding-right = 5px
 
 $item-margin-bottom = 50px
 
-scale(k)
-  .software-list
-    padding-left $padding-left * k
-    padding-right $padding-right * k
-
-    &__item
-      margin-bottom $item-margin-bottom * k
-
 .software-list
   display -webkit-box
   display -moz-box
@@ -24,37 +16,50 @@ scale(k)
   padding-left $padding-left
   padding-right $padding-right
 
+  @media only screen and (max-width: 1024px)
+    padding-left $padding-left * 0.4
+    padding-right $padding-right * 0.4
+
+  @media only screen and (min-width: 1024px) and (max-width: 1440px)
+    padding-left $padding-left * 0.5
+    padding-right $padding-right * 0.5
+
+  @media only screen and (min-width: 1440px) and (max-width: 1680px)
+    padding-left $padding-left * 0.6
+    padding-right $padding-right * 0.6
+
+  @media only screen and (min-width: 1680px) and (max-width: 1920px)
+    padding-left $padding-left * 0.7
+    padding-right $padding-right * 0.7
+
+  @media only screen and (min-width: 1920px) and (max-width: 2048px)
+    padding-left $padding-left * 0.8
+    padding-right $padding-right * 0.8
+
+  @media only screen and (max-width: 480px)
+    -webkit-flex-direction column
+    flex-direction column
+
   &__col-1, &__col-2
     width 44.35%
+
+    @media only screen and (max-width: 480px)
+      width 100%
 
   &__item
     margin-bottom $item-margin-bottom
 
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
+    @media only screen and (max-width: 1024px)
+      margin-bottom $item-margin-bottom * 0.4
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-bottom $item-margin-bottom * 0.5
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-bottom $item-margin-bottom * 0.6
 
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-bottom $item-margin-bottom * 0.7
 
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)
-
-// <= 480px
-@media only screen and (max-width: 480px)
-  .software-list
-    -webkit-flex-direction column
-    flex-direction column
-
-    &__col-1, &__col-2
-      width 100%
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-bottom $item-margin-bottom * 0.8

@@ -3,14 +3,6 @@
 $buffer-margin-top = 40px
 $progress-height = 44px
 
-scale(k)
-  .progress-bar
-    &__buffer
-      margin-top $buffer-margin-top * k
-
-    &__progress
-      height $progress-height * k
-
 .progress-bar
   &__title
     text-transform uppercase
@@ -20,26 +12,36 @@ scale(k)
     background-color $color-gray
     margin-top $buffer-margin-top
 
+    @media only screen and (max-width: 1024px)
+      margin-top $buffer-margin-top * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-top $buffer-margin-top * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-top $buffer-margin-top * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-top $buffer-margin-top * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-top $buffer-margin-top * 0.8
+
   &__progress
     height $progress-height
     background-color $color-blue
 
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
+    @media only screen and (max-width: 1024px)
+      height $progress-height * 0.4
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      height $progress-height * 0.5
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      height $progress-height * 0.6
 
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      height $progress-height * 0.7
 
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      height $progress-height * 0.8

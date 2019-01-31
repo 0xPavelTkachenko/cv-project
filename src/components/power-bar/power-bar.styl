@@ -6,17 +6,6 @@ $mark-margin-right = 20px
 $buffer-margin-left = 5px
 $buffer-margin-top = 30px
 
-scale(k)
-  .power-bar
-    &__mark
-      width $mark-size * k
-      height $mark-size * k
-      margin-right $mark-margin-right * k
-
-    &__buffer
-      margin-left $buffer-margin-left * k
-      margin-top $buffer-margin-top * k
-
 .power-bar
   &__title
     text-align center
@@ -34,6 +23,26 @@ scale(k)
     margin-left $buffer-margin-left
     margin-top $buffer-margin-top
 
+    @media only screen and (max-width: 1024px)
+      margin-left $buffer-margin-left * 0.4
+      margin-top $buffer-margin-top * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-left $buffer-margin-left * 0.5
+      margin-top $buffer-margin-top * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-left $buffer-margin-left * 0.6
+      margin-top $buffer-margin-top * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-left $buffer-margin-left * 0.7
+      margin-top $buffer-margin-top * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-left $buffer-margin-left * 0.8
+      margin-top $buffer-margin-top * 0.8
+
   &__mark
     width $mark-size
     height $mark-size
@@ -43,26 +52,30 @@ scale(k)
     -moz-border-radius 100%
     border-radius 100%
 
+    @media only screen and (max-width: 1024px)
+      width $mark-size * 0.4
+      height $mark-size * 0.4
+      margin-right $mark-margin-right * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      width $mark-size * 0.5
+      height $mark-size * 0.5
+      margin-right $mark-margin-right * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      width $mark-size * 0.6
+      height $mark-size * 0.6
+      margin-right $mark-margin-right * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      width $mark-size * 0.7
+      height $mark-size * 0.7
+      margin-right $mark-margin-right * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      width $mark-size * 0.8
+      height $mark-size * 0.8
+      margin-right $mark-margin-right * 0.8
+
     &_enabled
       background-color $color-blue
-
-
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
-
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
-
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
-
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
-
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)

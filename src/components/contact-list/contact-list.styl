@@ -3,17 +3,24 @@
 $border-spacing-v = 72px
 $contact-title-padding-right = 79px
 
-scale(k)
-  .contact-list
-    border-spacing 0 $border-spacing-v * k
-
-    .contact
-      &__title
-        padding-right $contact-title-padding-right * k
-
 .contact-list
   display table
   border-spacing 0 72px
+
+  @media only screen and (max-width: 1024px)
+    border-spacing 0 $border-spacing-v * 0.4
+
+  @media only screen and (min-width: 1024px) and (max-width: 1440px)
+    border-spacing 0 $border-spacing-v * 0.5
+
+  @media only screen and (min-width: 1440px) and (max-width: 1680px)
+    border-spacing 0 $border-spacing-v * 0.6
+
+  @media only screen and (min-width: 1680px) and (max-width: 1920px)
+    border-spacing 0 $border-spacing-v * 0.7
+
+  @media only screen and (min-width: 1920px) and (max-width: 2048px)
+    border-spacing 0 $border-spacing-v * 0.8
 
   .contact
     display table-row
@@ -24,22 +31,17 @@ scale(k)
     &__title
       padding-right 79px
 
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
+      @media only screen and (max-width: 1024px)
+        padding-right $contact-title-padding-right * 0.4
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
+      @media only screen and (min-width: 1024px) and (max-width: 1440px)
+        padding-right $contact-title-padding-right * 0.5
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
+      @media only screen and (min-width: 1440px) and (max-width: 1680px)
+        padding-right $contact-title-padding-right * 0.6
 
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
+      @media only screen and (min-width: 1680px) and (max-width: 1920px)
+        padding-right $contact-title-padding-right * 0.7
 
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)
+      @media only screen and (min-width: 1920px) and (max-width: 2048px)
+        padding-right $contact-title-padding-right * 0.8

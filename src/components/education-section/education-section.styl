@@ -13,63 +13,100 @@ $line-margin-bottom = 7px
 $content-padding-left = 105px
 $content-padding-top = 60px
 
-scale(k)
-  .section_education
-    .section
-      &__icon
-        margin-top $icon-margin-top * k
-        margin-right $icon-margin-right * k
-
-      &__title
-        margin-bottom $title-margin-bottom * k
-        margin-right $title-margin-right * k
-
-      &__line
-        margin-bottom $line-margin-bottom * k
-
-      &__content
-        padding-left $content-padding-left * k
-        padding-top $content-padding-top * k
-
 .section_education
   .section
     &__icon
       margin-top $icon-margin-top
       margin-right $icon-margin-right
 
+      @media only screen and (max-width: 1024px)
+        margin-top $icon-margin-top * 0.4
+        margin-right $icon-margin-right * 0.4
+
+      @media only screen and (min-width: 1024px) and (max-width: 1440px)
+        margin-top $icon-margin-top * 0.5
+        margin-right $icon-margin-right * 0.5
+
+      @media only screen and (min-width: 1440px) and (max-width: 1680px)
+        margin-top $icon-margin-top * 0.6
+        margin-right $icon-margin-right * 0.6
+
+      @media only screen and (min-width: 1680px) and (max-width: 1920px)
+        margin-top $icon-margin-top * 0.7
+        margin-right $icon-margin-right * 0.7
+
+      @media only screen and (min-width: 1920px) and (max-width: 2048px)
+        margin-top $icon-margin-top * 0.8
+        margin-right $icon-margin-right * 0.8
+
     &__title
       margin-bottom $title-margin-bottom
       margin-right $title-margin-right
+
+      @media only screen and (max-width: 1024px)
+        margin-bottom $title-margin-bottom * 0.4
+        margin-right $title-margin-right * 0.4
+
+      @media only screen and (min-width: 1024px) and (max-width: 1440px)
+        margin-bottom $title-margin-bottom * 0.5
+        margin-right $title-margin-right * 0.5
+
+      @media only screen and (min-width: 1440px) and (max-width: 1680px)
+        margin-bottom $title-margin-bottom * 0.6
+        margin-right $title-margin-right * 0.6
+
+      @media only screen and (min-width: 1680px) and (max-width: 1920px)
+        margin-bottom $title-margin-bottom * 0.7
+        margin-right $title-margin-right * 0.7
+
+      @media only screen and (min-width: 1920px) and (max-width: 2048px)
+        margin-bottom $title-margin-bottom * 0.8
+        margin-right $title-margin-right * 0.8
 
     &__line
       margin-bottom $line-margin-bottom
       margin-right 0
       margin-left 0
 
+      @media only screen and (max-width: 1024px)
+        margin-bottom $line-margin-bottom * 0.4
+
+      @media only screen and (min-width: 1024px) and (max-width: 1440px)
+        margin-bottom $line-margin-bottom * 0.5
+
+      @media only screen and (min-width: 1440px) and (max-width: 1680px)
+        margin-bottom $line-margin-bottom * 0.6
+
+      @media only screen and (min-width: 1680px) and (max-width: 1920px)
+        margin-bottom $line-margin-bottom * 0.7
+
+      @media only screen and (min-width: 1920px) and (max-width: 2048px)
+        margin-bottom $line-margin-bottom * 0.8
+
     &__content
       padding-left $content-padding-left
       padding-top $content-padding-top
 
+      @media only screen and (max-width: 1024px)
+        padding-left $content-padding-left * 0.4
+        padding-top $content-padding-top * 0.4
+
+      @media only screen and (min-width: 1024px) and (max-width: 1440px)
+        padding-left $content-padding-left * 0.5
+        padding-top $content-padding-top * 0.5
+
+      @media only screen and (min-width: 1440px) and (max-width: 1680px)
+        padding-left $content-padding-left * 0.6
+        padding-top $content-padding-top * 0.6
+
+      @media only screen and (min-width: 1680px) and (max-width: 1920px)
+        padding-left $content-padding-left * 0.7
+        padding-top $content-padding-top * 0.7
+
+      @media only screen and (min-width: 1920px) and (max-width: 2048px)
+        padding-left $content-padding-left * 0.8
+        padding-top $content-padding-top * 0.8
+
   .period
     &__title
       color $color-blue
-
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
-
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
-
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
-
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
-
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)

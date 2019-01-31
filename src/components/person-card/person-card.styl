@@ -11,26 +11,25 @@ $surname-letter-spacing = 1px
 $job-margin-left = 2px
 $job-letter-spacing = -1px
 
-scale(k)
-  .person-card
-    padding-left $padding-left * k
-
-    &__name
-      margin-top $name-margin-top * k
-      word-spacing $name-word-spacing * k
-
-    &__surname
-      margin-top $surname-margin-top * k
-      letter-spacing $surname-letter-spacing * k
-
-    &__job
-      margin-left $job-margin-left * k
-      letter-spacing $job-letter-spacing * k
-
 .person-card
   padding-left $padding-left
   text-align center
   text-transform uppercase
+
+  @media only screen and (max-width: 1024px)
+    padding-left $padding-left * 0.4
+
+  @media only screen and (min-width: 1024px) and (max-width: 1440px)
+    padding-left $padding-left * 0.5
+
+  @media only screen and (min-width: 1440px) and (max-width: 1680px)
+    padding-left $padding-left * 0.6
+
+  @media only screen and (min-width: 1680px) and (max-width: 1920px)
+    padding-left $padding-left * 0.7
+
+  @media only screen and (min-width: 1920px) and (max-width: 2048px)
+    padding-left $padding-left * 0.8
 
   &__photo
     margin 0 auto
@@ -40,11 +39,51 @@ scale(k)
     font-size 9.25rem
     word-spacing $name-word-spacing
 
+    @media only screen and (max-width: 1024px)
+      margin-top $name-margin-top * 0.4
+      word-spacing $name-word-spacing * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-top $name-margin-top * 0.5
+      word-spacing $name-word-spacing * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-top $name-margin-top * 0.6
+      word-spacing $name-word-spacing * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-top $name-margin-top * 0.7
+      word-spacing $name-word-spacing * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-top $name-margin-top * 0.8
+      word-spacing $name-word-spacing * 0.8
+
   &__surname
     margin-top $surname-margin-top
     font-size 10.2rem
     font-weight bold
     letter-spacing $surname-letter-spacing
+
+    @media only screen and (max-width: 1024px)
+      margin-top $surname-margin-top * 0.4
+      letter-spacing $surname-letter-spacing * 0.4
+
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-top $surname-margin-top * 0.5
+      letter-spacing $surname-letter-spacing * 0.5
+
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-top $surname-margin-top * 0.6
+      letter-spacing $surname-letter-spacing * 0.6
+
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-top $surname-margin-top * 0.7
+      letter-spacing $surname-letter-spacing * 0.7
+
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-top $surname-margin-top * 0.8
+      letter-spacing $surname-letter-spacing * 0.8
 
   &__job
     font-size 4.15rem
@@ -52,22 +91,22 @@ scale(k)
     margin-left $job-margin-left
     letter-spacing $job-letter-spacing
 
-// 40%
-@media only screen and (max-width: 1024px)
-  scale(0.4)
+    @media only screen and (max-width: 1024px)
+      margin-left $job-margin-left * 0.4
+      letter-spacing $job-letter-spacing * 0.4
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  scale(0.5)
+    @media only screen and (min-width: 1024px) and (max-width: 1440px)
+      margin-left $job-margin-left * 0.5
+      letter-spacing $job-letter-spacing * 0.5
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  scale(0.6)
+    @media only screen and (min-width: 1440px) and (max-width: 1680px)
+      margin-left $job-margin-left * 0.6
+      letter-spacing $job-letter-spacing * 0.6
 
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  scale(0.7)
+    @media only screen and (min-width: 1680px) and (max-width: 1920px)
+      margin-left $job-margin-left * 0.7
+      letter-spacing $job-letter-spacing * 0.7
 
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  scale(0.8)
+    @media only screen and (min-width: 1920px) and (max-width: 2048px)
+      margin-left $job-margin-left * 0.8
+      letter-spacing $job-letter-spacing * 0.8
