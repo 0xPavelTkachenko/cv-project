@@ -1,98 +1,33 @@
--
-  let education = {
-    title: 'Master degree',
-    subtitle: 'University name',
-    timeline: 'Feb 2011 - Jun 2014',
-    content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
-  };
-
-  let exp = {
-    title: 'Company name',
-    subtitle: 'Your job here',
-    timeline: 'Feb 2011 - Jun 2014',
-    content: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
-  };
-
-include components/person-card/person-card
-include components/profile-section/profile-section
-include components/contact-section/contact-section
-include components/skill-section/skill-section
-include components/education-section/education-section
-include components/exp-section/exp-section
-include components/software-section/software-section
-
 doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(name="keywords", content="cv, curriculum vitae")
-    meta(name="description", content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.")
+    meta(name="keywords", content=htmlWebpackPlugin.options.data.keywords)
+    meta(name="description", content=htmlWebpackPlugin.options.data.description)
     title cv-project
   body
     .main-wrapper
       .main-wrapper__col-1
-        +person-card({name: 'Name here', surname: 'Surname', job: 'Graphic designer'})
+        include components/person-card/person-card
+        +person-card(htmlWebpackPlugin.options.data.personCard)
 
+        include components/profile-section/profile-section
         +profile-section()
-          |Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          |Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-          |natoque penatibus et magnis dis parturient montes, nascetur
-          |ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-          |pretium quis, sem. Nulla consequat massa quis enim. Donec
-          |pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-          |justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-          |dictum felis eu <strong>pede mollis pretium. Integer tincidunt. Cras
-          |dapibus. Vivamus elementum semper nisi. Aenean
-          |vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-          |consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          |dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-          |nulla ut metus varius laoreet. Quisque rutrum.</strong>
+          |!{htmlWebpackPlugin.options.data.about}
 
-        +contact-section(
-          {
-            contacts: [
-              {title: 'Address', content: 'Main Street, City.'},
-              {title: 'E-mail', content: 'contact@domain.com'},
-              {title: 'Phone', content: '555-555-555'},
-              {title: 'Website', content: 'www.yourweb.com'}
-            ]
-          }
-        )
+        include components/contact-section/contact-section
+        +contact-section({contacts: htmlWebpackPlugin.options.data.contacts})
 
-        +skill-section(
-          {
-            skills: [
-              {title: 'Creative', power: 9},
-              {title: 'Teamwork', power: 11},
-              {title: 'Innovate', power: 6},
-              {title: 'Communication', power: 11}
-            ]
-          }
-        )
+        include components/skill-section/skill-section
+        +skill-section({skills: htmlWebpackPlugin.options.data.skills})
 
       .main-wrapper__col-2
-        +education-section(
-          {
-            education: [education, education, education, education]
-          }
-        )
+        include components/education-section/education-section
+        +education-section({education: htmlWebpackPlugin.options.data.education})
 
-        +exp-section(
-          {
-            exp: [exp, exp, exp]
-          }
-        )
+        include components/exp-section/exp-section
+        +exp-section({exp: htmlWebpackPlugin.options.data.exp})
 
-        +software-section(
-          {
-            software: [
-              {title: 'Photoshop', progress: 91.5},
-              {title: 'Dreamweaver', progress: 83},
-              {title: 'Illustrator', progress: 70.5},
-              {title: 'After Effects', progress: 61.5},
-              {title: 'Indesign', progress: 56},
-              {title: 'HTML&CSS3', progress: 91.5}
-            ]
-          }
-        )
+        include components/software-section/software-section
+        +software-section({software: htmlWebpackPlugin.options.data.software})

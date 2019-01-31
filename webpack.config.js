@@ -11,7 +11,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       filename: 'index.html',
-      template: './src/index.pug'
+      template: './src/index.pug',
+      data: require('./src/data.js')
     })
   ],
   module: {
