@@ -1,4 +1,5 @@
 import './index.styl';
+import './favicon.ico';
 import './components/contact-section/contact-section.js';
 import './components/education-section/education-section.js';
 import './components/exp-section/exp-section.js';

@@ -49,7 +49,7 @@ module.exports = {
         }
       },
       {
-        test: /\.png$/,
+        test: /\.(png|ico)$/,
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
