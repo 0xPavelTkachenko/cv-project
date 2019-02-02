@@ -7,5 +7,5 @@ mixin exp-section(options)
     options.classname = options.classname || "";
     options.exp = options.exp || [];
 
-  +section({classname: "section_exp " + options.classname, title: "Experience", icon: "./img/exp-icon.png"})
+  +section({classname: "section_exp " + options.classname, title: "Experience", icon: "./assets/exp-icon.png"})
     +period-list({periods: options.exp})

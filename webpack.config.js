@@ -53,7 +53,7 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./img/[name].[ext]"
+          name: "./assets/[name].[ext]"
         }
       }
     ]

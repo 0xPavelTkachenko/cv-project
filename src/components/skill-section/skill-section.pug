@@ -7,6 +7,6 @@ mixin skill-section(options)
     options.classname = options.classname || "";
     options.skills = options.skills || [];
 
-  +section({classname: "section_skill " + options.classname, title: "Skills", icon: "./img/skill-icon.png"})
+  +section({classname: "section_skill " + options.classname, title: "Skills", icon: "./assets/skill-icon.png"})
     each s in options.skills
       +power-bar({title: s.title, power: s.power})
