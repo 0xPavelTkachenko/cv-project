@@ -1,112 +1,45 @@
 @require "../circle"
 
-$padding-left = 32px
-
-$name-margin-top = 45px
-$name-word-spacing = 2px
-
-$surname-margin-top = -40px
-$surname-letter-spacing = 1px
-
-$job-margin-left = 2px
-$job-letter-spacing = -1px
-
 .person-card
-  padding-left $padding-left
-  text-align center
+  display -webkit-box
+  display -moz-box
+  display -ms-flexbox
+  display -webkit-flex
+  display flex
+  -webkit-flex-direction column
+  flex-direction column
+  -webkit-align-items center
+  align-items center
+  padding-left 2.666666666rem
   text-transform uppercase
-
-  @media only screen and (max-width: 1024px)
-    padding-left $padding-left * 0.4
-
-  @media only screen and (min-width: 1024px) and (max-width: 1440px)
-    padding-left $padding-left * 0.5
-
-  @media only screen and (min-width: 1440px) and (max-width: 1680px)
-    padding-left $padding-left * 0.6
-
-  @media only screen and (min-width: 1680px) and (max-width: 1920px)
-    padding-left $padding-left * 0.7
-
-  @media only screen and (min-width: 1920px) and (max-width: 2048px)
-    padding-left $padding-left * 0.8
 
   &__photo
     margin 0 auto
 
   &__name
-    margin-top $name-margin-top
+    margin-top 5.65rem
     font-size 9.25rem
-    word-spacing $name-word-spacing
-
-    @media only screen and (max-width: 1024px)
-      margin-top $name-margin-top * 0.4
-      word-spacing $name-word-spacing * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-top $name-margin-top * 0.5
-      word-spacing $name-word-spacing * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-top $name-margin-top * 0.6
-      word-spacing $name-word-spacing * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-top $name-margin-top * 0.7
-      word-spacing $name-word-spacing * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-top $name-margin-top * 0.8
-      word-spacing $name-word-spacing * 0.8
+    word-spacing 0.166666666rem
+    line-height 7rem
 
   &__surname
-    margin-top $surname-margin-top
+    margin-top 1.25rem
     font-size 10.2rem
     font-weight bold
-    letter-spacing $surname-letter-spacing
-
-    @media only screen and (max-width: 1024px)
-      margin-top $surname-margin-top * 0.4
-      letter-spacing $surname-letter-spacing * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-top $surname-margin-top * 0.5
-      letter-spacing $surname-letter-spacing * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-top $surname-margin-top * 0.6
-      letter-spacing $surname-letter-spacing * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-top $surname-margin-top * 0.7
-      letter-spacing $surname-letter-spacing * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-top $surname-margin-top * 0.8
-      letter-spacing $surname-letter-spacing * 0.8
+    letter-spacing 0.083333333rem
+    line-height 7.718918918rem
 
   &__job
     font-size 4.15rem
     font-weight bold
-    margin-left $job-margin-left
-    letter-spacing $job-letter-spacing
+    margin-top 3.583333333rem
+    margin-left 0.166666666rem
+    letter-spacing -0.083333333rem
+    line-height 3.140540540rem
 
-    @media only screen and (max-width: 1024px)
-      margin-left $job-margin-left * 0.4
-      letter-spacing $job-letter-spacing * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-left $job-margin-left * 0.5
-      letter-spacing $job-letter-spacing * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-left $job-margin-left * 0.6
-      letter-spacing $job-letter-spacing * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-left $job-margin-left * 0.7
-      letter-spacing $job-letter-spacing * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-left $job-margin-left * 0.8
-      letter-spacing $job-letter-spacing * 0.8
+  &__name, &__surname, &__job
+    max-width 100%
+    overflow hidden
+    -o-text-overflow ellipsis
+    text-overflow ellipsis
+    text-align center

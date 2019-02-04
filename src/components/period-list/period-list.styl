@@ -1,15 +1,5 @@
 @require "../period"
 
-$li-margin-bottom = 34px
-
-$mark-left = -81px
-$mark-top = 2px
-
-$period-subtitle-margin-top = 31px
-$period-subtitle-margin-left = -2px
-$period-content-margin-top = 24px
-$period-content-margin-left = 3px
-
 .period-list
   margin 0
   padding 0
@@ -17,101 +7,18 @@ $period-content-margin-left = 3px
   &__li
     position relative
     list-style-type none
-    margin-bottom $li-margin-bottom
+    margin-bottom 2.833333333rem
 
-    @media only screen and (max-width: 1024px)
-      margin-bottom 15.5px
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-bottom $li-margin-bottom * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-bottom 23.8px
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-bottom 25px
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-bottom 26.4px
+  &__li:last-child
+    margin-bottom 0
 
   &__mark
     position absolute
-    left $mark-left
-    top $mark-top
+    left -6.75rem
+    top 0.166666666rem
     width 3.333333333rem
     height 3.333333333rem
-    background-color black
-    -webkit-border-radius 100%
-    -moz-border-radius 100%
-    border-radius 100%
-
-    @media only screen and (max-width: 1024px)
-      left $mark-left * 0.4
-      top $mark-top * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      left $mark-left * 0.5
-      top $mark-top * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      left $mark-left * 0.6
-      top $mark-top * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      left $mark-left * 0.7
-      top $mark-top * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      left $mark-left * 0.8
-      top $mark-top * 0.8
-
-
-  .period
-    &__subtitle
-      margin-top $period-subtitle-margin-top
-      margin-left $period-subtitle-margin-left
-
-      @media only screen and (max-width: 1024px)
-        margin-top $period-subtitle-margin-top * 0.4
-        margin-left $period-subtitle-margin-left * 0.4
-
-      @media only screen and (min-width: 1024px) and (max-width: 1440px)
-        margin-top $period-subtitle-margin-top * 0.5
-        margin-left $period-subtitle-margin-left * 0.5
-
-      @media only screen and (min-width: 1440px) and (max-width: 1680px)
-        margin-top $period-subtitle-margin-top * 0.6
-        margin-left $period-subtitle-margin-left * 0.6
-
-      @media only screen and (min-width: 1680px) and (max-width: 1920px)
-        margin-top $period-subtitle-margin-top * 0.7
-        margin-left $period-subtitle-margin-left * 0.7
-
-      @media only screen and (min-width: 1920px) and (max-width: 2048px)
-        margin-top $period-subtitle-margin-top * 0.8
-        margin-left $period-subtitle-margin-left * 0.8
-
-
-    &__content
-      margin-top $period-content-margin-top
-      margin-left $period-content-margin-left
-
-      @media only screen and (max-width: 1024px)
-        margin-top $period-content-margin-top * 0.4
-        margin-left $period-content-margin-left * 0.4
-
-      @media only screen and (min-width: 1024px) and (max-width: 1440px)
-        margin-top $period-content-margin-top * 0.5
-        margin-left $period-content-margin-left * 0.5
-
-      @media only screen and (min-width: 1440px) and (max-width: 1680px)
-        margin-top $period-content-margin-top * 0.6
-        margin-left $period-content-margin-left * 0.6
-
-      @media only screen and (min-width: 1680px) and (max-width: 1920px)
-        margin-top $period-content-margin-top * 0.7
-        margin-left $period-content-margin-left * 0.7
-
-      @media only screen and (min-width: 1920px) and (max-width: 2048px)
-        margin-top $period-content-margin-top * 0.8
-        margin-left $period-content-margin-left * 0.8
+    background-color #000
+    -webkit-border-radius 50%
+    -moz-border-radius 50%
+    border-radius 50%

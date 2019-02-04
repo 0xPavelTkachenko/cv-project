@@ -1,24 +1,24 @@
-mixin circle(options)
+mixin circle(o)
   -
-    options = options || {};
-    options.img = options.img || {};
+    o = o || {};
+    o.img = o.img || {};
 
     let imgStyle = "";
-    if (options.img.src) {
-      imgStyle += "background-image: url(\"" + options.img.src + "\");";
+    if (o.img.src) {
+      imgStyle += "background-image: url(\"" + o.img.src + "\");";
       imgStyle += "background-color: transparent;";
 
-      if (options.img.x || options.img.y) {
+      if (o.img.x || o.img.y) {
         let x, y;
-        x = options.img.x ? options.img.x : "0";
-        y = options.img.y ? options.img.y : "0";
+        x = o.img.x ? o.img.x : "0";
+        y = o.img.y ? o.img.y : "0";
         imgStyle += "background-position: " + x + " " + y + ";";
       }
 
-      if (options.img.size) {
-        imgStyle += "background-size: " + options.img.size + ";";
+      if (o.img.size) {
+        imgStyle += "background-size: " + o.img.size + ";";
       }
     }
 
-  .circle(class=options.classname)
+  .circle
     .circle__inner(style=imgStyle)

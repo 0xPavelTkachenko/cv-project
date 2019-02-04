@@ -1,55 +1,43 @@
 @require "fonts"
 @require "components/person-card"
-@require "components/profile-section"
-@require "components/contact-section"
-@require "components/skill-section"
-@require "components/software-section"
-@require "components/exp-section"
-@require "components/education-section"
-
-$k40 = 0.4
-$k50 = 0.5
-$k60 = 0.6
-$k70 = 0.7
-$k80 = 0.8
-
-$html-color = #000
-$html-background-color = #fff
-$html-font-size = 12px
-$html-font-family = "Myriad Pro", Arial, sans-serif
-
-$body-padding-top = 152px
-
-$main-wrapper-width = 90.8%
-$main-wrapper-min-width = 320px
-
-$col-1-width = 36.8%
-$col-1-padding-top = 24px
-$col-1-padding-left = 8px
-
-$col-2-width = 56.2%
-
-$person-card-margin-bottom = 149px
-$section-profile-margin-bottom = 91px
-$section-contact-margin-bottom = 31px
-$section-education-margin-bottom = 101px
-$section-exp-margin-bottom = 102px
+@require "components/section"
+@require "components/contact-list"
+@require "components/skill-list"
+@require "components/period-list"
+@require "components/software-list"
 
 html
-  color $html-color
-  background-color $html-background-color
-  font-size $html-font-size
-  font-family $html-font-family
+  $font-size = 12px
+
+  color #000
+  background-color #fff
+  font-size $font-size
+  font-family "Myriad Pro", Arial, sans-serif
+
+  @media only screen and (max-width: 1024px)
+    font-size $font-size * 0.4
+
+  @media only screen and (min-width: 1024px) and (max-width: 1440px)
+    font-size $font-size * 0.5
+
+  @media only screen and (min-width: 1440px) and (max-width: 1680px)
+    font-size $font-size * 0.6
+
+  @media only screen and (min-width: 1680px) and (max-width: 1920px)
+    font-size $font-size * 0.7
+
+  @media only screen and (min-width: 1920px) and (max-width: 2048px)
+    font-size $font-size * 0.8
 
 body
   margin 0
   padding 0
-  padding-top $body-padding-top
 
 .main-wrapper
-  width $main-wrapper-width
-  min-width $main-wrapper-min-width
+  width 90.8%
+  min-width 320px
   margin 0 auto
+  padding-bottom 15.83333333rem
   display -webkit-box
   display -moz-box
   display -ms-flexbox
@@ -58,203 +46,78 @@ body
   -webkit-justify-content space-between
   justify-content space-between
 
-  &__col-1
-    width $col-1-width
-    padding-top $col-1-padding-top
-    padding-left $col-1-padding-left
-
-    .person-card
-      margin-bottom $person-card-margin-bottom
-
-    .section_profile
-      margin-bottom $section-profile-margin-bottom
-
-    .section_contact
-      margin-bottom $section-contact-margin-bottom
-
-  &__col-2
-    width $col-2-width
-
-    .section_education
-      margin-bottom $section-education-margin-bottom
-
-    .section_exp
-      margin-bottom $section-exp-margin-bottom
-
-// <= 960px
-@media only screen and (max-width: 960px)
-  html
-    font-size $html-font-size * $k40
-
-  body
-    padding-top 0
-
-  .main-wrapper
+  @media only screen and (max-width: 960px)
     -webkit-flex-direction column
     flex-direction column
-    padding-left 8px
-    padding-right 8px
+    padding-left 0.666666666rem
+    padding-right 0.666666666rem
 
-    &__col-1, &__col-2
-      width 100%
-
-    &__col-1
-      padding-left 0
-
-      .person-card, .section_profile, .section_contact, .section_skill
-        margin-bottom 60px
-
-    &__col-2
-      .section_education, .section_exp
-        margin-bottom 60px
-
-// 40%
-@media only screen and (min-width: 960px) and (max-width: 1024px)
-  html
-    font-size $html-font-size * $k40
-
-  body
-    padding-top $body-padding-top * $k40
-
-  .main-wrapper
-    -webkit-flex-direction column
+  @media only screen and (min-width: 960px)
+    -webkit-flex-direction row
     flex-direction row
 
-    &__col-1
-      width $col-1-width
-      padding-top $col-1-padding-top * $k40
-      padding-left $col-1-padding-left * $k40
+  &__col-1
+    @media only screen and (max-width: 960px)
+      width 100%
 
-      .person-card
-        margin-bottom $person-card-margin-bottom * $k40
+    @media only screen and (min-width: 960px)
+      width 36.8%
+      padding-top 14.66666666rem
+      padding-left 0.666666666rem
 
-      .section_profile
-        margin-bottom 41.5px
+  &__col-2
+    @media only screen and (max-width: 960px)
+      width 100%
 
-      .section_contact
-        margin-bottom $section-contact-margin-bottom * $k40
+    @media only screen and (min-width: 960px)
+      width 56.2%
+      padding-top 12.41666666rem
 
-    &__col-2
-      width $col-2-width
+  &__person-card
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-      .section_education
-        margin-bottom $section-education-margin-bottom * $k40
+    @media only screen and (min-width: 960px)
+      margin-top 0
 
-      .section_exp
-        margin-bottom $section-exp-margin-bottom * $k40
+  &__profile
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-// 50%
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
-  html
-    font-size $html-font-size * $k50
+    @media only screen and (min-width: 960px)
+      margin-top 13.5rem
 
-  body
-    padding-top $body-padding-top * $k50
+  &__contact
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-  .main-wrapper
-    &__col-1
-      padding-top $col-1-padding-top * $k50
-      padding-left $col-1-padding-left * $k50
+    @media only screen and (min-width: 960px)
+      margin-top 7.583333333rem
 
-      .person-card
-        margin-bottom $person-card-margin-bottom * $k50
+  &__skills
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-      .section_profile
-        margin-bottom $section-profile-margin-bottom * $k50
+    @media only screen and (min-width: 960px)
+      margin-top 2.666666666rem
 
-      .section_contact
-        margin-bottom $section-contact-margin-bottom * $k50
+  &__education
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-    &__col-2
-      .section_education
-        margin-bottom $section-education-margin-bottom * $k50
+    @media only screen and (min-width: 960px)
+      margin-top 0
 
-      .section_exp
-        margin-bottom $section-exp-margin-bottom * $k50
+  &__experience
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-// 60%
-@media only screen and (min-width: 1440px) and (max-width: 1680px)
-  html
-    font-size $html-font-size * $k60
+    @media only screen and (min-width: 960px)
+      margin-top 8.333333333rem
 
-  body
-    padding-top $body-padding-top * $k60
+  &__software
+    @media only screen and (max-width: 960px)
+      margin-top 10rem
 
-  .main-wrapper
-    &__col-1
-      padding-top $col-1-padding-top * $k60
-      padding-left $col-1-padding-left * $k60
-
-      .person-card
-        margin-bottom $person-card-margin-bottom * $k60
-
-      .section_profile
-        margin-bottom $section-profile-margin-bottom * $k60
-
-      .section_contact
-        margin-bottom $section-contact-margin-bottom * $k60
-
-    &__col-2
-      .section_education
-        margin-bottom $section-education-margin-bottom * $k60
-
-      .section_exp
-        margin-bottom $section-exp-margin-bottom * $k60
-
-// 70%
-@media only screen and (min-width: 1680px) and (max-width: 1920px)
-  html
-    font-size $html-font-size * $k70
-
-  body
-    padding-top $body-padding-top * $k70
-
-  .main-wrapper
-    &__col-1
-      padding-top $col-1-padding-top * $k70
-      padding-left $col-1-padding-left * $k70
-
-      .person-card
-        margin-bottom $person-card-margin-bottom * $k70
-
-      .section_profile
-          margin-bottom $section-profile-margin-bottom * $k70
-
-      .section_contact
-        margin-bottom $section-contact-margin-bottom * $k70
-
-    &__col-2
-      .section_education
-        margin-bottom $section-education-margin-bottom * $k70
-
-      .section_exp
-        margin-bottom $section-exp-margin-bottom * $k70
-
-// 80%
-@media only screen and (min-width: 1920px) and (max-width: 2048px)
-  html
-    font-size $html-font-size * $k80
-
-  body
-    padding-top $body-padding-top * $k80
-
-  .main-wrapper
-    &__col-1
-      padding-top $col-1-padding-top * $k80
-      padding-left $col-1-padding-left * $k80
-
-      .person-card
-        margin-bottom $person-card-margin-bottom * $k80
-
-      .section_profile
-        margin-bottom $section-profile-margin-bottom * $k80
-
-      .section_contact
-        margin-bottom $section-contact-margin-bottom * $k80
-
-    &__col-2
-      .section_education
-        margin-bottom $section-education-margin-bottom * $k80
-
-      .section_exp
-        margin-bottom $section-exp-margin-bottom * $k80
+    @media only screen and (min-width: 960px)
+      margin-top 8.75rem

@@ -1,1 +1,0 @@
-import './education-icon.png'

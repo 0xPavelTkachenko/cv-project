@@ -1,10 +1,17 @@
-include ../contact/contact
-
-mixin contact-list(options)
+mixin contact-list(o)
   -
-    options = options || {};
-    options.contacts = options.contacts || [];
+    o = o || {};
+    o.contacts = o.contacts || [];
 
-  .contact-list(class=options.classname)
-    each c in options.contacts
-      +contact({classname: "contact-list__contact", title: c.title, content: c.content})
+  .contact-list
+    each c in o.contacts
+      .contact-list__contact
+        .contact-list__header=c.header
+        if (c.href)
+          a.contact-list__content.contact-list__content_a(
+            href=c.href,
+            target=c.www ? "_blank" : undefined,
+            rel=c.www ? "noopener noreferrer" : undefined
+          )=c.content
+        else
+          .contact-list__content=c.content

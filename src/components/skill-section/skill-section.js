@@ -1,1 +1,0 @@
-import './skill-icon.png'

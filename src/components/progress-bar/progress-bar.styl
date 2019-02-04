@@ -1,47 +1,18 @@
 @require "../colors"
 
-$buffer-margin-top = 40px
-$progress-height = 44px
-
 .progress-bar
   &__title
-    text-transform uppercase
     font-size 4.25rem
+    white-space nowrap
+    overflow hidden
+    -o-text-overflow ellipsis
+    text-overflow ellipsis
+    text-transform uppercase
 
   &__buffer
     background-color $color-gray
-    margin-top $buffer-margin-top
-
-    @media only screen and (max-width: 1024px)
-      margin-top $buffer-margin-top * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-top $buffer-margin-top * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-top $buffer-margin-top * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-top $buffer-margin-top * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-top $buffer-margin-top * 0.8
+    margin-top 3.333333333rem
 
   &__progress
-    height $progress-height
+    height 3.666666666rem
     background-color $color-blue
-
-    @media only screen and (max-width: 1024px)
-      height $progress-height * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      height $progress-height * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      height $progress-height * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      height $progress-height * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      height $progress-height * 0.8

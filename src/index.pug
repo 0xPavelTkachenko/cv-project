@@ -8,27 +8,42 @@ html(lang="en")
     link(rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico")
     title cv-project
   body
+    include components/person-card/person-card
+    include components/section/section
+    include components/contact-list/contact-list
+    include components/skill-list/skill-list
+    include components/period-list/period-list
+    include components/software-list/software-list
+
     .main-wrapper
+
       .main-wrapper__col-1
-        include components/person-card/person-card
-        +person-card(htmlWebpackPlugin.options.data.personCard)
 
-        include components/profile-section/profile-section
-        +profile-section()
-          |!{htmlWebpackPlugin.options.data.about}
+        .main-wrapper__person-card
+          +person-card(htmlWebpackPlugin.options.data.personCard)
 
-        include components/contact-section/contact-section
-        +contact-section({contacts: htmlWebpackPlugin.options.data.contacts})
+        .main-wrapper__profile
+          +section({title: "Profile", type: "profile"})
+            |!{htmlWebpackPlugin.options.data.about}
 
-        include components/skill-section/skill-section
-        +skill-section({skills: htmlWebpackPlugin.options.data.skills})
+        .main-wrapper__contact
+          +section({title: "Contact", type: "contact"})
+            +contact-list({contacts: htmlWebpackPlugin.options.data.contacts})
+
+        .main-wrapper__skills
+          +section({title: "Skills", type: "skill"})
+            +skill-list({skills: htmlWebpackPlugin.options.data.skills})
 
       .main-wrapper__col-2
-        include components/education-section/education-section
-        +education-section({education: htmlWebpackPlugin.options.data.education})
 
-        include components/exp-section/exp-section
-        +exp-section({exp: htmlWebpackPlugin.options.data.exp})
+        .main-wrapper__education
+          +section({title: "Education", type: "education"})
+            +period-list({periods: htmlWebpackPlugin.options.data.education})
 
-        include components/software-section/software-section
-        +software-section({software: htmlWebpackPlugin.options.data.software})
+        .main-wrapper__experience
+          +section({title: "Experience", type: "experience"})
+            +period-list({periods: htmlWebpackPlugin.options.data.exp})
+
+        .main-wrapper__software
+          +section({title: "Software", type: "software"})
+            +software-list({software: htmlWebpackPlugin.options.data.software})

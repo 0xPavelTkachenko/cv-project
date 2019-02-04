@@ -9,7 +9,7 @@ module.exports = {
     job: 'Graphic designer'
   },
 
-  about: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.' +
+  about: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ' +
          'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis ' +
          'natoque penatibus et magnis dis parturient montes, nascetur ' +
          'ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, ' +
@@ -24,10 +24,10 @@ module.exports = {
          'nulla ut metus varius laoreet. Quisque rutrum.</strong>',
 
   contacts: [
-    {title: 'Address', content: 'Main Street, City.'},
-    {title: 'E-mail', content: 'contact@domain.com'},
-    {title: 'Phone', content: '555-555-555'},
-    {title: 'Website', content: 'www.yourweb.com'}
+    {header: 'Address', content: 'Main Street, City.'},
+    {header: 'E-mail', content: 'contact@domain.com', href: 'mailto:contact@domain.com'},
+    {header: 'Phone', content: '555-555-555', href: 'tel:555-555-555'},
+    {header: 'Website', content: 'www.yourweb.com', href: 'https:www.yourweb.com', www: true}
   ],
 
   skills: [
@@ -39,6 +39,7 @@ module.exports = {
 
   education: [
     {
+      titleColor: 'blue',
       title: 'Master degree',
       subtitle: 'University name',
       timeline: 'Feb 2011 - Jun 2014',
@@ -49,6 +50,7 @@ module.exports = {
     },
 
     {
+      titleColor: 'blue',
       title: 'Master degree',
       subtitle: 'University name',
       timeline: 'Feb 2011 - Jun 2014',
@@ -59,6 +61,7 @@ module.exports = {
     },
 
     {
+      titleColor: 'blue',
       title: 'Master degree',
       subtitle: 'University name',
       timeline: 'Feb 2011 - Jun 2014',
@@ -69,6 +72,7 @@ module.exports = {
     },
 
     {
+      titleColor: 'blue',
       title: 'Master degree',
       subtitle: 'University name',
       timeline: 'Feb 2011 - Jun 2014',

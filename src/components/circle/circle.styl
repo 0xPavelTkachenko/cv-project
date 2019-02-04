@@ -1,43 +1,20 @@
 @require "../colors"
 
-$circle-size = 462px
-$circle-size-inner = 405px
-
 .circle
-  width $circle-size
-  height $circle-size
+  width 38.5rem
+  height 38.5rem
   border 1px solid $color-blue
-  -webkit-border-radius 100%
-  -moz-border-radius 100%
-  border-radius 100%
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+  border-radius 50%
   position relative
 
-  @media only screen and (max-width: 1024px)
-    width $circle-size * 0.4
-    height $circle-size * 0.4
-
-  @media only screen and (min-width: 1024px) and (max-width: 1440px)
-    width $circle-size * 0.5
-    height $circle-size * 0.5
-
-  @media only screen and (min-width: 1440px) and (max-width: 1680px)
-    width $circle-size * 0.6
-    height $circle-size * 0.6
-
-  @media only screen and (min-width: 1680px) and (max-width: 1920px)
-    width $circle-size * 0.7
-    height $circle-size * 0.7
-
-  @media only screen and (min-width: 1920px) and (max-width: 2048px)
-    width $circle-size * 0.8
-    height $circle-size * 0.8
-
   &__inner
-    width $circle-size-inner
-    height $circle-size-inner
-    -webkit-border-radius 100%
-    -moz-border-radius 100%
-    border-radius 100%
+    width 33.75rem
+    height 33.75rem
+    -webkit-border-radius 50%
+    -moz-border-radius 50%
+    border-radius 50%
     background-color $color-blue
     background-repeat no-repeat
 
@@ -47,23 +24,3 @@ $circle-size-inner = 405px
     top 0
     bottom 0
     margin auto
-
-    @media only screen and (max-width: 1024px)
-      width $circle-size-inner * 0.4
-      height $circle-size-inner * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      width $circle-size-inner * 0.5
-      height $circle-size-inner * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      width $circle-size-inner * 0.6
-      height $circle-size-inner * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      width $circle-size-inner * 0.7
-      height $circle-size-inner * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      width $circle-size-inner * 0.8
-      height $circle-size-inner * 0.8

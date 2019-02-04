@@ -1,0 +1,11 @@
+include ../power-bar/power-bar
+
+mixin skill-list(o)
+  -
+    o = o || {};
+    o.skills = o.skills || [];
+    
+  .skill-list
+    each s in o.skills
+      .skill-list__item
+        +power-bar(s)

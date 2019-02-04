@@ -1,11 +1,12 @@
 include ../circle/circle
 
-mixin person-card(options)
+mixin person-card(o)
   -
-    options = options || {};
+    o = o || {};
 
-  section.person-card(class=options.classname)
-    +circle({classname: "person-card__photo", img: {src: options.photo, x: "center", y: "center", size: "contain"}})
-    .person-card__name=options.name
-    .person-card__surname=options.surname
-    .person-card__job=options.job
+  section.person-card
+    .percon-card__photo
+      +circle({img: {src: o.photo, x: "center", y: "center", size: "contain"}})
+    .person-card__name=o.name
+    .person-card__surname=o.surname
+    .person-card__job=o.job

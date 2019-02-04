@@ -1,10 +1,5 @@
 @require "../progress-bar"
 
-$padding-left = 15px
-$padding-right = 5px
-
-$item-margin-bottom = 50px
-
 .software-list
   display -webkit-box
   display -moz-box
@@ -13,28 +8,8 @@ $item-margin-bottom = 50px
   display flex
   -webkit-justify-content space-between
   justify-content space-between
-  padding-left $padding-left
-  padding-right $padding-right
-
-  @media only screen and (max-width: 1024px)
-    padding-left $padding-left * 0.4
-    padding-right $padding-right * 0.4
-
-  @media only screen and (min-width: 1024px) and (max-width: 1440px)
-    padding-left $padding-left * 0.5
-    padding-right $padding-right * 0.5
-
-  @media only screen and (min-width: 1440px) and (max-width: 1680px)
-    padding-left $padding-left * 0.6
-    padding-right $padding-right * 0.6
-
-  @media only screen and (min-width: 1680px) and (max-width: 1920px)
-    padding-left $padding-left * 0.7
-    padding-right $padding-right * 0.7
-
-  @media only screen and (min-width: 1920px) and (max-width: 2048px)
-    padding-left $padding-left * 0.8
-    padding-right $padding-right * 0.8
+  padding-right 0.416666666rem
+  padding-left 1.25rem
 
   @media only screen and (max-width: 480px)
     -webkit-flex-direction column
@@ -46,20 +21,12 @@ $item-margin-bottom = 50px
     @media only screen and (max-width: 480px)
       width 100%
 
+  &__col-1
+    @media only screen and (max-width: 480px)
+      margin-bottom 4.166666666rem
+
   &__item
-    margin-bottom $item-margin-bottom
+    margin-bottom 4.166666666rem
 
-    @media only screen and (max-width: 1024px)
-      margin-bottom $item-margin-bottom * 0.4
-
-    @media only screen and (min-width: 1024px) and (max-width: 1440px)
-      margin-bottom $item-margin-bottom * 0.5
-
-    @media only screen and (min-width: 1440px) and (max-width: 1680px)
-      margin-bottom $item-margin-bottom * 0.6
-
-    @media only screen and (min-width: 1680px) and (max-width: 1920px)
-      margin-bottom $item-margin-bottom * 0.7
-
-    @media only screen and (min-width: 1920px) and (max-width: 2048px)
-      margin-bottom $item-margin-bottom * 0.8
+  &__item:last-child
+    margin-bottom 0

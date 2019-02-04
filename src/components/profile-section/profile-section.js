@@ -1,1 +1,0 @@
-import './profile-icon.png'

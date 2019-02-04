@@ -1,15 +1,15 @@
-mixin progress-bar(options)
+mixin progress-bar(o)
   -
-    options = options || {};
-    options.progress = options.progress || 0;
+    o = o || {};
+    o.progress = o.progress || 0;
 
-    if (options.progress < 0) {
-      options.progress = 0;
-    } else if (options.progress > 100) {
-      options.progress = 100;
+    if (o.progress < 0) {
+      o.progress = 0;
+    } else if (o.progress > 100) {
+      o.progress = 100;
     }
 
-  .progress-bar(class=options.classname)
-    .progress-bar__title=options.title
+  .progress-bar
+    .progress-bar__title=o.title
     .progress-bar__buffer
-      .progress-bar__progress(style="width: "+options.progress+"%;")
+      .progress-bar__progress(style="width: " + o.progress + "%;")

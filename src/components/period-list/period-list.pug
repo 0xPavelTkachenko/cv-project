@@ -1,13 +1,14 @@
 include ../period/period
 
-mixin period-list(options)
+mixin period-list(o)
   -
-    options = options || {};
-    options.periods = options.periods || [];
+    o = o || {};
+    o.periods = o.periods || [];
 
-  ul.period-list(class=options.classname)
-    each p in options.periods
+  ul.period-list
+    each p in o.periods
       li.period-list__li
         .period-list__mark
-        +period({classname: "period-list__item", title: p.title, subtitle: p.subtitle, timeline: p.timeline})
-          | #{p.content}
+        .period-list__item
+          +period(p)
+            | !{p.content}

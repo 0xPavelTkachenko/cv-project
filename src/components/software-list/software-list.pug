@@ -1,15 +1,16 @@
 include ../progress-bar/progress-bar
 
-mixin software-list(options)
+mixin software-list(o)
   -
-    options = options || {};
-    options.classname = options.classname || "";
-    options.software = options.software || [];
+    o = o || {};
+    o.software = o.software || [];
 
-  .software-list(class=options.classname)
+  .software-list
     .software-list__col-1
-      - for (let i = 0; i < options.software.length; i += 2)
-        +progress-bar({classname: "software-list__item", title: options.software[i].title, progress: options.software[i].progress})
+      - for (let i = 0; i < o.software.length; i += 2)
+        .software-list__item
+          +progress-bar(o.software[i])
     .software-list__col-2
-      - for (let i = 1; i < options.software.length; i += 2)
-        +progress-bar({classname: "software-list__item", title: options.software[i].title, progress: options.software[i].progress})
+      - for (let i = 1; i < o.software.length; i += 2)
+        .software-list__item
+          +progress-bar(o.software[i])

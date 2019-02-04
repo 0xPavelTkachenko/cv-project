@@ -1,14 +1,12 @@
-include ../circle/circle
-
-mixin section(options)
+mixin section(o)
   -
-    options = options || {};
-    let iconStyle = options.icon ? "background-image: url(\"" + options.icon + "\");" : "display: none;";
+    o = o || {};
+    o.type = typeof o.type === 'string' ? "section_" + o.type : undefined;
 
-  section.section(class=options.classname)
+  section.section(class=o.type)
     header.section__header
-      .section__icon(style=iconStyle)
-      .section__title=options.title
+      .section__icon
+      h2.section__title=o.title
       .section__line
     .section__content
         block
