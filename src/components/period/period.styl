@@ -21,17 +21,26 @@
     white-space nowrap
     overflow hidden
 
+    @media only screen and (max-width: 480px)
+      max-width 100%
+
     &_blue
       color $color-blue
 
   &__timeline
-    max-width 50%
+    max-width 46%
     margin-left 2.333333333rem
     font-size 4.3rem
     -o-text-overflow ellipsis
     text-overflow ellipsis
     white-space nowrap
     overflow hidden
+
+    @media only screen and (max-width: 480px)
+      margin-left 0
+      max-width 100%
+      -webkit-flex-basis 100%
+      flex-basis 100%
 
   &__timeline::before
     content "// "
