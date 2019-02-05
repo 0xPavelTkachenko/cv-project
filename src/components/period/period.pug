@@ -6,9 +6,10 @@ mixin period(o)
     o.titleColor = typeof o.titleColor === 'string' ? "period__title_" + o.titleColor : undefined;
 
   .period
-    .period__title(class=o.titleColor)=o.title
-    .period__timeline=o.timeline
-    .period__subtitle=o.subtitle
+    header.period__header
+      .period__title(class=o.titleColor)=o.title
+      .period__timeline=o.timeline
+      .period__subtitle=o.subtitle
     .period__content
       +text()
         block
