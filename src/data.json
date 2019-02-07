@@ -1,0 +1,93 @@
+{
+  "keywords": "cv, curriculum vitae",
+
+  "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+
+  "personCard": {
+    "name": "Name here",
+    "surname": "Surname",
+    "job": "Graphic designer"
+  },
+
+  "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu <strong>pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</strong>",
+
+  "contacts": [
+    {"header": "Address", "content": "Main Street, City."},
+    {"header": "E-mail", "content": "contact@domain.com", "href": "mailto:contact@domain.com"},
+    {"header": "Phone", "content": "555-555-555", "href": "tel:555-555-555"},
+    {"header": "Website", "content": "www.yourweb.com", "href": "https:www.yourweb.com", "www": true}
+  ],
+
+  "skills": [
+    {"title": "Creative", "power": 9},
+    {"title": "Teamwork", "power": 11},
+    {"title": "Innovate", "power": 6},
+    {"title": "Communication", "power": 11}
+  ],
+
+  "education": [
+    {
+      "titleColor": "blue",
+      "title": "Master degree",
+      "subtitle": "University name",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    },
+
+    {
+      "titleColor": "blue",
+      "title": "Master degree",
+      "subtitle": "University name",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    },
+
+    {
+      "titleColor": "blue",
+      "title": "Master degree",
+      "subtitle": "University name",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    },
+
+    {
+      "titleColor": "blue",
+      "title": "Master degree",
+      "subtitle": "University name",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    }
+  ],
+
+  "exp": [
+    {
+      "title": "Company name",
+      "subtitle": "Your job here",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    },
+
+    {
+      "title": "Company name",
+      "subtitle": "Your job here",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    },
+
+    {
+      "title": "Company name",
+      "subtitle": "Your job here",
+      "timeline": "Feb 2011 - Jun 2014",
+      "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque."
+    }
+  ],
+
+  "software": [
+    {"title": "Photoshop", "progress": 91.5},
+    {"title": "Dreamweaver", "progress": 83},
+    {"title": "Illustrator", "progress": 70.5},
+    {"title": "After Effects", "progress": 61.5},
+    {"title": "Indesign", "progress": 56},
+    {"title": "HTML&CSS3", "progress": 91.5}
+  ]
+}

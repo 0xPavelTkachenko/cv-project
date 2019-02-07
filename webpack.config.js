@@ -12,7 +12,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: 'index.html',
       template: './src/index.pug',
-      data: require('./src/data.js')
+      data: require('./src/data.json')
     })
   ],
   module: {
