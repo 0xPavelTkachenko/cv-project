@@ -1,2 +1,17 @@
-# cv-project
-this is my solution for the first exercise by Fullstack Development company. you can find preview [here](https://0xpaveltkachenko.github.io/cv-project/index.html).
+# CV project
+Верстка макета резюме.
+
+## Сборка проекта
+```
+$ cd cv-project
+$ npm i
+$ npm run build
+```
+
+## Запуск сервера
+```
+$ npm run server
+```
+
+## Ссылка на GitHub Pages
+https://0xpaveltkachenko.github.io/cv-project/index.html
