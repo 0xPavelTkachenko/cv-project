@@ -15,7 +15,7 @@
     {"header": "Address", "content": "Main Street, City."},
     {"header": "E-mail", "content": "contact@domain.com", "href": "mailto:contact@domain.com"},
     {"header": "Phone", "content": "555-555-555", "href": "tel:555-555-555"},
-    {"header": "Website", "content": "www.yourweb.com", "href": "https:www.yourweb.com", "www": true}
+    {"header": "Website", "content": "www.yourweb.com", "href": "https://www.yourweb.com", "www": true}
   ],
 
   "skills": [
