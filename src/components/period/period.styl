@@ -3,12 +3,7 @@
 
 .period
   &__header
-    display -webkit-box
-    display -moz-box
-    display -ms-flexbox
-    display -webkit-flex
     display flex
-    -webkit-flex-wrap wrap
     flex-wrap wrap
 
   &__title
@@ -16,7 +11,6 @@
     font-size 4.3rem
     font-weight bold
     text-transform uppercase
-    -o-text-overflow ellipsis
     text-overflow ellipsis
     white-space nowrap
     overflow hidden
@@ -31,7 +25,6 @@
     max-width 46%
     margin-left 2.333333333rem
     font-size 4.3rem
-    -o-text-overflow ellipsis
     text-overflow ellipsis
     white-space nowrap
     overflow hidden
@@ -39,7 +32,6 @@
     @media only screen and (max-width: 480px)
       margin-left 0
       max-width 100%
-      -webkit-flex-basis 100%
       flex-basis 100%
 
   &__timeline::before
@@ -51,9 +43,7 @@
   &__subtitle
     font-size 4.3rem
     text-transform uppercase
-    -webkit-flex-basis 100%
     flex-basis 100%
-    -o-text-overflow ellipsis
     text-overflow ellipsis
     white-space nowrap
     overflow hidden

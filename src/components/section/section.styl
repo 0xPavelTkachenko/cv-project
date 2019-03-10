@@ -3,22 +3,15 @@
 
 .section
   &__header
-    display -webkit-box
-    display -moz-box
-    display -ms-flexbox
-    display -webkit-flex
     display flex
-    -webkit-align-items center
     align-items center
 
     @media only screen and (max-width: 480px)
-      -webkit-justify-content center
       justify-content center
 
   &__icon
     width 13rem
     height 13rem
-    -webkit-flex-shrink 0
     flex-shrink 0
     background-repeat no-repeat
     background-size contain
@@ -31,7 +24,6 @@
     font-weight bold
     letter-spacing 0.083333333rem
     white-space nowrap
-    -o-text-overflow ellipsis
     text-overflow ellipsis
     overflow hidden
 
@@ -39,7 +31,6 @@
       border-bottom 0.833333333rem solid $color-blue
 
   &__line
-    -webkit-flex-grow 1
     flex-grow 1
     height 0.833333333rem
     background-color $color-blue
