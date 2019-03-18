@@ -58,6 +58,15 @@ module.exports = {
         options: {
           name: "./assets/[name].[ext]"
         }
+      },
+      {
+        type: 'javascript/auto',
+        test: /\.json$/,
+        exclude: /(node_modules|.git)/,
+        loader: 'file-loader',
+        options: {
+          name: "./[name].[ext]"
+        }
       }
     ]
   },

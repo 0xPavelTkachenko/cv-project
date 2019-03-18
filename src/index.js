@@ -1,3 +1,5 @@
+import './manifest.json';
+
 const importAll = function importAllFiles(r) {
   r.keys().forEach(r);
 };
