@@ -48,15 +48,23 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./fonts/[name].[ext]"
+          name: "./assets/fonts/[name].[ext]"
         }
       },
       {
-        test: /\.(png|ico)$/,
+        test: /\.png$/,
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./assets/[name].[ext]"
+          name: "./assets/images/[name].[ext]"
+        }
+      },
+      {
+        test: /\.ico$/,
+        exclude: /(node_modules|.git)/,
+        loader: 'file-loader',
+        options: {
+          name: "./assets/favicons/[name].[ext]"
         }
       },
       {
