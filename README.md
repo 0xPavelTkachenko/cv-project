@@ -14,4 +14,4 @@ $ npm run server
 ```
 
 ## Ссылка на GitHub Pages
-https://0xpaveltkachenko.github.io/cv-project/index.html
+https://pasha-zolotukhin.github.io/cv-project/index.html
