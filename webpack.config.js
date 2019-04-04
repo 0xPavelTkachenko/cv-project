@@ -48,7 +48,7 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./assets/fonts/[name].[ext]"
+          name: './assets/fonts/[name].[ext]'
         }
       },
       {
@@ -56,7 +56,7 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./assets/images/[name].[ext]"
+          name: './assets/images/[name].[ext]'
         }
       },
       {
@@ -64,7 +64,7 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./assets/favicons/[name].[ext]"
+          name: './assets/favicons/[name].[ext]'
         }
       },
       {
@@ -73,7 +73,7 @@ module.exports = {
         exclude: /(node_modules|.git)/,
         loader: 'file-loader',
         options: {
-          name: "./[name].[ext]"
+          name: './[name].[ext]'
         }
       }
     ]
