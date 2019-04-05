@@ -3,7 +3,7 @@ include ../text/text
 mixin section(o)
   -
     o = o || {};
-    o.type = typeof o.type === 'string' ? "section_" + o.type : undefined;
+    o.type = typeof o.type === 'string' ? "section_type_" + o.type : undefined;
 
   section.section(class=o.type)
     header.section__header

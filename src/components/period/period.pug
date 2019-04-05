@@ -3,7 +3,9 @@ include ../text/text
 mixin period(o)
   -
     o = o || {};
-    o.titleColor = typeof o.titleColor === 'string' ? "period__title_" + o.titleColor : undefined;
+    o.titleColor = typeof o.titleColor === 'string'
+      ? "period__title_color_" + o.titleColor
+      : undefined;
 
   .period
     header.period__header
