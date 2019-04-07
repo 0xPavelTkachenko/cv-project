@@ -1,14 +1,14 @@
 include ../period/period
 
-mixin period-list(o)
+mixin period-list(options)
   -
-    o = o || {};
-    o.periods = o.periods || [];
+    options = options || {};
+    options.periods = options.periods || [];
 
   ul.period-list
-    each p in o.periods
+    each period in options.periods
       li.period-list__li
         .period-list__mark
         .period-list__item
-          +period(p)
-            | !{p.content}
+          +period(period)
+            | !{period.content}

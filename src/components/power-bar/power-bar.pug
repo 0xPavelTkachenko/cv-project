@@ -1,18 +1,18 @@
-mixin power-bar(o)
+mixin power-bar(options)
   -
-    o = o || {};
-    o.power = o.power || 0;
+    options = options || {};
+    options.power = options.power || 0;
 
-    if (o.power < 0) {
-      o.power = 0;
-    } else if (o.power > 12) {
-      o.power = 12;
+    if (options.power < 0) {
+      options.power = 0;
+    } else if (options.power > 12) {
+      options.power = 12;
     }
 
   .power-bar
-    .power-bar__title=o.title
+    .power-bar__title=options.title
     .power-bar__buffer
-      - for (let i = 0; i < o.power; i++)
+      - for (let i = 0; i < options.power; i++)
           .power-bar__mark.power-bar__mark_enabled
-      - for (let i = o.power; i < 12; i++)
+      - for (let i = options.power; i < 12; i++)
           .power-bar__mark

@@ -1,14 +1,14 @@
 include ../text/text
 
-mixin section(o)
+mixin section(options)
   -
-    o = o || {};
-    o.type = typeof o.type === 'string' ? "section_type_" + o.type : undefined;
+    options = options || {};
+    options.type = typeof options.type === 'string' ? "section_type_" + options.type : undefined;
 
-  section.section(class=o.type)
+  section.section(class=options.type)
     header.section__header
       .section__icon
-      h2.section__title=o.title
+      h2.section__title=options.title
       .section__line
     .section__content
         block

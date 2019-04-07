@@ -1,17 +1,17 @@
 include ../text/text
 
-mixin period(o)
+mixin period(options)
   -
-    o = o || {};
-    o.titleColor = typeof o.titleColor === 'string'
-      ? "period__title_color_" + o.titleColor
+    options = options || {};
+    options.titleColor = typeof options.titleColor === 'string'
+      ? "period__title_color_" + options.titleColor
       : undefined;
 
   .period
     header.period__header
-      .period__title(class=o.titleColor)=o.title
-      .period__timeline=o.timeline
-      .period__subtitle=o.subtitle
+      .period__title(class=options.titleColor)=options.title
+      .period__timeline=options.timeline
+      .period__subtitle=options.subtitle
     .period__content
       +text()
         block

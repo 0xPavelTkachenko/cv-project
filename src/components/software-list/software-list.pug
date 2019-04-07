@@ -1,16 +1,16 @@
 include ../progress-bar/progress-bar
 
-mixin software-list(o)
+mixin software-list(options)
   -
-    o = o || {};
-    o.software = o.software || [];
+    options = options || {};
+    options.software = options.software || [];
 
   .software-list
     .software-list__col-1
-      - for (let i = 0; i < o.software.length; i += 2)
+      - for (let i = 0; i < options.software.length; i += 2)
         .software-list__item
-          +progress-bar(o.software[i])
+          +progress-bar(options.software[i])
     .software-list__col-2
-      - for (let i = 1; i < o.software.length; i += 2)
+      - for (let i = 1; i < options.software.length; i += 2)
         .software-list__item
-          +progress-bar(o.software[i])
+          +progress-bar(options.software[i])

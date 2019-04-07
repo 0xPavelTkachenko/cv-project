@@ -1,11 +1,11 @@
 include ../power-bar/power-bar
 
-mixin skill-list(o)
+mixin skill-list(options)
   -
-    o = o || {};
-    o.skills = o.skills || [];
+    options = options || {};
+    options.skills = options.skills || [];
     
   .skill-list
-    each s in o.skills
+    each skill in options.skills
       .skill-list__item
-        +power-bar(s)
+        +power-bar(skill)
