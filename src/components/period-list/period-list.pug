@@ -6,9 +6,9 @@ mixin period-list(options)
     options.periods = options.periods || [];
 
   ul.period-list
-    each period in options.periods
+    each periodItem in options.periods
       li.period-list__li
         .period-list__mark
         .period-list__item
-          +period(period)
-            | !{period.content}
+          +period(periodItem)
+            | !{periodItem.content}
