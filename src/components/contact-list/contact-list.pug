@@ -9,7 +9,7 @@ mixin contact-list(options)
       .contact-list__contact
         .contact-list__header=contact.header
         if (contact.href)
-          a.contact-list__content.contact-list__content_a(
+          a.contact-list__content.contact-list__content_link(
             href=contact.href,
             target=contact.www ? "_blank" : undefined,
             rel=contact.www ? "noopener noreferrer" : undefined
