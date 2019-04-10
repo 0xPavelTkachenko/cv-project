@@ -7,8 +7,8 @@ mixin period-list(options)
 
   ul.period-list
     each periodItem in options.periods
-      li.period-list__li
+      li.period-list__list-item
         .period-list__mark
-        .period-list__item
+        .period-list__period-wrapper
           +period(periodItem)
             | !{periodItem.content}

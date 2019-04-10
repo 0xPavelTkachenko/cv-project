@@ -1,4 +1,4 @@
-include ../circle/circle
+include ../photo/photo
 
 mixin person-card(options)
   -
@@ -6,7 +6,7 @@ mixin person-card(options)
 
   section.person-card
     .percon-card__photo
-      +circle({img: {src: options.photo, x: "center", y: "center", size: "contain"}})
+      +photo({img: {src: options.photo, x: "center", y: "center", size: "contain"}})
     .person-card__name=options.name
     .person-card__surname=options.surname
     .person-card__job=options.job
