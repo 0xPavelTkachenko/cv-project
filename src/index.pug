@@ -20,7 +20,7 @@ html(lang="en")
 
     .main-wrapper
 
-      .main-wrapper__col-1
+      .main-wrapper__left-column
 
         .main-wrapper__person-card
           +person-card(htmlWebpackPlugin.options.data.personCard)
@@ -38,7 +38,7 @@ html(lang="en")
           +section({title: "Skills", type: "skill"})
             +skill-list({skills: htmlWebpackPlugin.options.data.skills})
 
-      .main-wrapper__col-2
+      .main-wrapper__right-column
 
         .main-wrapper__education
           +section({title: "Education", type: "education"})

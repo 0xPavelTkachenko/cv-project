@@ -7,11 +7,11 @@ mixin software-list(options)
     const software = options.software || [];
 
   .software-list
-    .software-list__col-1
+    .software-list__left-column
       - for (let i = 0; i < software.length; i += 2)
         .software-list__item
           +progress-bar(software[i])
-    .software-list__col-2
+    .software-list__right-column
       - for (let i = 1; i < software.length; i += 2)
         .software-list__item
           +progress-bar(software[i])
