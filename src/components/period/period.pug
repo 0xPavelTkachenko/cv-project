@@ -3,15 +3,17 @@ include ../text/text
 mixin period(options)
   -
     options = options || {};
-    options.titleColor = typeof options.titleColor === 'string'
+
+    const { title, timeline, subtitle } = options;
+    const titleColor = typeof options.titleColor === 'string'
       ? "period__title_color_" + options.titleColor
       : undefined;
 
   .period
     header.period__header
-      .period__title(class=options.titleColor)=options.title
-      .period__timeline=options.timeline
-      .period__subtitle=options.subtitle
+      .period__title(class=titleColor)=title
+      .period__timeline=timeline
+      .period__subtitle=subtitle
     .period__content
       +text()
         block

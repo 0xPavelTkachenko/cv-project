@@ -3,12 +3,14 @@ include ../text/text
 mixin section(options)
   -
     options = options || {};
-    options.type = typeof options.type === 'string' ? "section_type_" + options.type : undefined;
 
-  section.section(class=options.type)
+    const { title } = options;
+    const type = typeof options.type === 'string' ? "section_type_" + options.type : undefined;
+
+  section.section(class=type)
     header.section__header
       .section__icon
-      h2.section__title=options.title
+      h2.section__title=title
       .section__line
     .section__content
         block

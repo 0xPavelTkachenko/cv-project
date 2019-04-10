@@ -1,18 +1,20 @@
 mixin power-bar(options)
   -
     options = options || {};
-    options.power = options.power || 0;
 
-    if (options.power < 0) {
-      options.power = 0;
-    } else if (options.power > 12) {
-      options.power = 12;
+    const { title } = options;
+    let power = options.power || 0;
+
+    if (power < 0) {
+      power = 0;
+    } else if (power > 12) {
+      power = 12;
     }
 
   .power-bar
-    .power-bar__title=options.title
+    .power-bar__title=title
     .power-bar__buffer
-      - for (let i = 0; i < options.power; i++)
+      - for (let i = 0; i < power; i++)
           .power-bar__mark.power-bar__mark_enabled
-      - for (let i = options.power; i < 12; i++)
+      - for (let i = power; i < 12; i++)
           .power-bar__mark

@@ -1,15 +1,17 @@
 mixin progress-bar(options)
   -
     options = options || {};
-    options.progress = options.progress || 0;
 
-    if (options.progress < 0) {
-      options.progress = 0;
-    } else if (options.progress > 100) {
-      options.progress = 100;
+    const { title } = options;
+    let progress = options.progress || 0;
+
+    if (progress < 0) {
+      progress = 0;
+    } else if (progress > 100) {
+      progress = 100;
     }
 
   .progress-bar
-    .progress-bar__title=options.title
+    .progress-bar__title=title
     .progress-bar__buffer
-      .progress-bar__progress(style="width: " + options.progress + "%;")
+      .progress-bar__progress(style="width: " + progress + "%;")

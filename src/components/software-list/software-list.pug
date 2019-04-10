@@ -3,14 +3,15 @@ include ../progress-bar/progress-bar
 mixin software-list(options)
   -
     options = options || {};
-    options.software = options.software || [];
+
+    const software = options.software || [];
 
   .software-list
     .software-list__col-1
-      - for (let i = 0; i < options.software.length; i += 2)
+      - for (let i = 0; i < software.length; i += 2)
         .software-list__item
-          +progress-bar(options.software[i])
+          +progress-bar(software[i])
     .software-list__col-2
-      - for (let i = 1; i < options.software.length; i += 2)
+      - for (let i = 1; i < software.length; i += 2)
         .software-list__item
-          +progress-bar(options.software[i])
+          +progress-bar(software[i])

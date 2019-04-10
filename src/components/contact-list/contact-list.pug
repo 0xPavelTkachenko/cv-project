@@ -1,10 +1,11 @@
 mixin contact-list(options)
   -
     options = options || {};
-    options.contacts = options.contacts || [];
+
+    const contacts = options.contacts || [];
 
   .contact-list
-    each contact in options.contacts
+    each contact in contacts
       .contact-list__contact
         .contact-list__header=contact.header
         if (contact.href)

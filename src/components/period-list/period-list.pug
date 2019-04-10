@@ -3,10 +3,11 @@ include ../period/period
 mixin period-list(options)
   -
     options = options || {};
-    options.periods = options.periods || [];
+
+    const periods = options.periods || [];
 
   ul.period-list
-    each periodItem in options.periods
+    each periodItem in periods
       li.period-list__list-item
         .period-list__mark
         .period-list__period-wrapper

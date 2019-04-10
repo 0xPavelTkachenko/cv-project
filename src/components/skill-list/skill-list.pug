@@ -3,9 +3,10 @@ include ../power-bar/power-bar
 mixin skill-list(options)
   -
     options = options || {};
-    options.skills = options.skills || [];
-    
+
+    const skills = options.skills || [];
+
   .skill-list
-    each skill in options.skills
+    each skill in skills
       .skill-list__item
         +power-bar(skill)

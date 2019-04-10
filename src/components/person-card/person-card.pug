@@ -4,9 +4,11 @@ mixin person-card(options)
   -
     options = options || {};
 
+    const { photo, name, surname, job } = options;
+
   section.person-card
     .percon-card__photo
-      +photo({img: {src: options.photo, x: "center", y: "center", size: "contain"}})
-    .person-card__name=options.name
-    .person-card__surname=options.surname
-    .person-card__job=options.job
+      +photo({img: {src: photo, x: "center", y: "center", size: "contain"}})
+    .person-card__name=name
+    .person-card__surname=surname
+    .person-card__job=job
