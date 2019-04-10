@@ -6,7 +6,7 @@ mixin contact-list(options)
 
   .contact-list
     each contact in contacts
-      .contact-list__contact
+      .contact-list__list-item
         .contact-list__header=contact.header
         if (contact.href)
           a.contact-list__content.contact-list__content_link(

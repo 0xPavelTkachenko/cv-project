@@ -9,9 +9,9 @@ mixin software-list(options)
   .software-list
     .software-list__left-column
       - for (let i = 0; i < software.length; i += 2)
-        .software-list__item
+        .software-list__list-item
           +progress-bar(software[i])
     .software-list__right-column
       - for (let i = 1; i < software.length; i += 2)
-        .software-list__item
+        .software-list__list-item
           +progress-bar(software[i])
