@@ -11,8 +11,8 @@ mixin contact-list(options)
         if (contact.href)
           a.contact-list__content.contact-list__content_link(
             href=contact.href,
-            target=contact.www ? "_blank" : undefined,
-            rel=contact.www ? "noopener noreferrer" : undefined
+            target="_blank",
+            rel="noopener noreferrer"
           )=contact.content
         else
           .contact-list__content=contact.content
