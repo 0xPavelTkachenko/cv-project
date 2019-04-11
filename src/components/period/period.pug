@@ -4,14 +4,14 @@ mixin period(options)
   -
     options = options || {};
 
-    const { title, timeline, subtitle } = options;
-    const titleColor = typeof options.titleColor === 'string'
-      ? "period__title_color_" + options.titleColor
-      : undefined;
+    const { title, titleColor, timeline, subtitle } = options;
+
+    let titleClassName = "period__title";
+    titleClassName += typeof titleColor === "string" ? ` period__title_color_${titleColor}` : "";
 
   .period
     header.period__header
-      .period__title(class=titleColor)=title
+      div(class=titleClassName)=title
       .period__timeline=timeline
       .period__subtitle=subtitle
     .period__content

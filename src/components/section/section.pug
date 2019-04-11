@@ -4,10 +4,12 @@ mixin section(options)
   -
     options = options || {};
 
-    const { title } = options;
-    const type = typeof options.type === 'string' ? "section_type_" + options.type : undefined;
+    const { title, type } = options;
 
-  section.section(class=type)
+    let className = "section";
+    className += typeof type === "string" ? ` section_type_${type}` : "";
+
+  section(class=className)
     header.section__header
       .section__icon
       h2.section__title=title
