@@ -3,18 +3,21 @@ mixin power-bar(options)
     options = options || {};
 
     const { title } = options;
-    let power = options.power || 0;
 
-    if (power < 0) {
-      power = 0;
-    } else if (power > 12) {
-      power = 12;
+    const MIN_POWER = 0;
+    const MAX_POWER = 12;
+    let power = options.power || MIN_POWER;
+
+    if (power < MIN_POWER) {
+      power = MIN_POWER;
+    } else if (power > MAX_POWER) {
+      power = MAX_POWER;
     }
 
   .power-bar
     .power-bar__title=title
     .power-bar__buffer
-      - for (let i = 0; i < power; i++)
+      - for (let i = MIN_POWER; i < power; i++)
           .power-bar__mark.power-bar__mark_enabled
-      - for (let i = power; i < 12; i++)
+      - for (let i = power; i < MAX_POWER; i++)
           .power-bar__mark

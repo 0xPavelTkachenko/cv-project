@@ -3,15 +3,20 @@ mixin progress-bar(options)
     options = options || {};
 
     const { title } = options;
-    let progress = options.progress || 0;
 
-    if (progress < 0) {
-      progress = 0;
-    } else if (progress > 100) {
-      progress = 100;
+    const MIN_PROGRESS = 0;
+    const MAX_PROGRESS = 100;
+    let progress = options.progress || MIN_PROGRESS;
+
+    if (progress < MIN_PROGRESS) {
+      progress = MIN_PROGRESS;
+    } else if (progress > MAX_PROGRESS) {
+      progress = MAX_PROGRESS;
     }
+
+    const progressInPercent = ((progress - MIN_PROGRESS) / (MAX_PROGRESS - MIN_PROGRESS)) * 100;
 
   .progress-bar
     .progress-bar__title=title
     .progress-bar__buffer
-      .progress-bar__progress(style="width: " + progress + "%;")
+      .progress-bar__progress(style="width: " + progressInPercent + "%;")
