@@ -6,18 +6,18 @@ mixin photo(options)
 
     let imgStyle = "";
     if (img.src) {
-      imgStyle += "background-image: url(\"" + img.src + "\");";
+      imgStyle += `background-image: url("${img.src}");`;
       imgStyle += "background-color: transparent;";
 
       if (img.x || img.y) {
         let x, y;
         x = img.x ? img.x : "0";
         y = img.y ? img.y : "0";
-        imgStyle += "background-position: " + x + " " + y + ";";
+        imgStyle += `background-position: ${x} ${y};`;
       }
 
       if (img.size) {
-        imgStyle += "background-size: " + img.size + ";";
+        imgStyle += `background-size: ${img.size};`;
       }
     }
 
