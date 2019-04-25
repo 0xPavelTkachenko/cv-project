@@ -1,6 +1,11 @@
 # CV project
 Отзывчивая верстка макета резюме.
 
+## Клонирование репозитория
+```
+$ git clone https://github.com/pasha-zolotukhin/cv-project.git
+```
+
 ## Сборка проекта
 ```
 $ cd cv-project
