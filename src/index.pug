@@ -18,36 +18,36 @@ html(lang="en")
     include components/period-list/period-list
     include components/software-list/software-list
 
-    .main-wrapper
+    main.wrapper
 
-      .main-wrapper__left-column
+      .wrapper__left-column
 
-        .main-wrapper__person-card
+        .wrapper__person-card
           +person-card(htmlWebpackPlugin.options.data.personCard)
 
-        .main-wrapper__profile
+        .wrapper__profile
           +section({title: "Profile", type: "profile"})
             +text()
               |!{htmlWebpackPlugin.options.data.about}
 
-        .main-wrapper__contact
+        .wrapper__contact
           +section({title: "Contact", type: "contact"})
             +contact-list({contacts: htmlWebpackPlugin.options.data.contacts})
 
-        .main-wrapper__skills
+        .wrapper__skills
           +section({title: "Skills", type: "skill"})
             +skill-list({skills: htmlWebpackPlugin.options.data.skills})
 
-      .main-wrapper__right-column
+      .wrapper__right-column
 
-        .main-wrapper__education
+        .wrapper__education
           +section({title: "Education", type: "education"})
             +period-list({periods: htmlWebpackPlugin.options.data.education})
 
-        .main-wrapper__experience
+        .wrapper__experience
           +section({title: "Experience", type: "experience"})
             +period-list({periods: htmlWebpackPlugin.options.data.exp})
 
-        .main-wrapper__software
+        .wrapper__software
           +section({title: "Software", type: "software"})
             +software-list({software: htmlWebpackPlugin.options.data.software})
