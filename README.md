@@ -3,7 +3,7 @@
 
 ## Клонирование репозитория
 ```
-$ git clone https://github.com/pasha-zolotukhin/cv-project.git
+$ git clone https://github.com/p-tka4enko/cv-project.git
 ```
 
 ## Сборка проекта
@@ -19,4 +19,4 @@ $ npm run server
 ```
 
 ## Ссылка на GitHub Pages
-https://pasha-zolotukhin.github.io/cv-project/index.html
+https://p-tka4enko.github.io/cv-project/index.html
